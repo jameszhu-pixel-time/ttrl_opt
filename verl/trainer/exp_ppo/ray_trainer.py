@@ -626,7 +626,7 @@ class RayPPOTrainer:
         Creates the train and validation dataloaders.
         """
         # TODO: we have to make sure the batch size is divisible by the dp size
-        from verl.trainer.main_ppo import create_rl_dataset, create_rl_sampler
+        from verl.trainer.main_exp_ppo import create_rl_dataset, create_rl_sampler
 
         if train_dataset is None:
             train_dataset = create_rl_dataset(
@@ -719,6 +719,40 @@ class RayPPOTrainer:
             f.write("\n".join(lines) + "\n")
 
         print(f"Dumped generations to {filename}")
+
+    def _collect_rollout_dump_extra_infos(self, batch, expected_len):
+        """Collect rollout-level metadata fields for generation dumps."""
+        field_groups = {
+            "extra_info": ("solved_objective", "solution", "code_exec_res"),
+            "reward_model": ("ground_truth", "majority_gt", "original_gt"),
+        }
+        collected_values = {key: [] for keys in field_groups.values() for key in keys}
+
+        for data_item in batch:
+            for group_name, group_keys in field_groups.items():
+                group_data = data_item.non_tensor_batch.get(group_name) or {}
+                for key in group_keys:
+                    collected_values[key].append(group_data.get(key))
+
+        return {
+            key: values
+            for key, values in collected_values.items()
+            if len(values) == expected_len and all(value is not None for value in values)
+        }
+
+    def _should_dump_rollout_generations(self, is_last_step):
+        rollout_data_dir = self.config.trainer.get("rollout_data_dir", None)
+        if not rollout_data_dir:
+            return None, False
+
+        try:
+            rollout_intervals = int(self.config.trainer.get("rollout_intervals", 1))
+        except (TypeError, ValueError):
+            rollout_intervals = 1
+
+        rollout_intervals = max(rollout_intervals, 1)
+        should_dump = is_last_step or self.global_steps % rollout_intervals == 0
+        return rollout_data_dir, should_dump
 
     def _maybe_log_val_generations(self, inputs, outputs, scores):
         """Log a table of validation samples to the configured logger (wandb or swanlab)"""
@@ -1456,18 +1490,21 @@ class RayPPOTrainer:
                         for key, value in ttrl_metrics.items():
                                 metrics.update({f"train/{key}": value})
                     # Log rollout generations if enabled
-                    rollout_data_dir = self.config.trainer.get("rollout_data_dir", None)
-                    if rollout_data_dir:
+                    rollout_data_dir, should_dump_rollouts = self._should_dump_rollout_generations(is_last_step)
+                    if should_dump_rollouts:
                         with marked_timer("dump_rollout_generations", timing_raw, color="green"):
-                            # print(batch.batch.keys())
                             inputs = self.tokenizer.batch_decode(batch.batch["prompts"], skip_special_tokens=True)
                             outputs = self.tokenizer.batch_decode(batch.batch["responses"], skip_special_tokens=True)
+                            dump_reward_extra_infos_dict = dict(reward_extra_infos_dict)
+                            dump_reward_extra_infos_dict.update(
+                                self._collect_rollout_dump_extra_infos(batch, expected_len=len(inputs))
+                            )
                             scores = batch.batch["token_level_scores"].sum(-1).cpu().tolist()
                             self._dump_generations(
                                 inputs=inputs,
                                 outputs=outputs,
                                 scores=scores,
-                                reward_extra_infos_dict=reward_extra_infos_dict,
+                                reward_extra_infos_dict=dump_reward_extra_infos_dict,
                                 dump_path=rollout_data_dir,
                             )
 

@@ -21,6 +21,35 @@ from content_utils import extract_code_block, extract_obj
 from utils import load_jsonl
 import random
 
+
+def _safe_to_float(x):
+    if x is None:
+        return None
+    if isinstance(x, (int, float, np.integer, np.floating)):
+        return float(x)
+    if isinstance(x, str):
+        x = x.strip()
+        if x == "" or x.lower() == "none":
+            return None
+        try:
+            return float(x)
+        except ValueError:
+            return None
+    return None
+
+
+def _answer_reward_like_compute_score(solver_result, ground_truth, code_exec_res="Done", cri=1e-6):
+    pred = _safe_to_float(solver_result)
+    gt = _safe_to_float(ground_truth)
+
+    if code_exec_res != "Done":
+        return False
+    if pred is None or gt is None:
+        return False
+
+    rel_err = abs(pred - gt) / (abs(gt) + 1.0)
+    return rel_err < cri
+
 def select_top_k_per_prompt(data, n_votes_per_prompt, n_samples_per_prompt):
     """
     Select the first k rollouts per prompt, used for TTRL downsampling.
@@ -189,6 +218,8 @@ def compute_ttrl_metrics(batch, n):
     gt_reward = []
     majority_label = []
     gt_label = []
+    answer_correct = []
+    code_success = []
 
     for i in range(len(batch)):
         data_item = batch[idx[i]]
@@ -196,8 +227,24 @@ def compute_ttrl_metrics(batch, n):
         gt_reward.append(data_item.batch["token_level_scores_original"].sum().item())
         majority_label.append(str(data_item.non_tensor_batch["reward_model"]["majority_gt"]))##zr integrate with follow grade function(req str)
         gt_label.append(str(data_item.non_tensor_batch["reward_model"]["original_gt"]))##zr integrate with follow grade function(req str)
+        answer_correct.append(
+            _answer_reward_like_compute_score(
+                data_item.non_tensor_batch["extra_info"]["solved_objective"],
+                data_item.non_tensor_batch["reward_model"]["original_gt"],
+                data_item.non_tensor_batch["extra_info"]["code_exec_res"],
+            )
+        )
+        code_success.append(data_item.non_tensor_batch["extra_info"]["code_exec_res"] == "Done")
 
-    ttrl_metrics = _batch_compute_ttrl_metrics(majority_reward, gt_reward, majority_label, gt_label, n=n)
+    ttrl_metrics = _batch_compute_ttrl_metrics(
+        majority_reward,
+        gt_reward,
+        majority_label,
+        gt_label,
+        answer_correct,
+        code_success,
+        n=n,
+    )
     majority_ratio_list = batch.non_tensor_batch["majority_ratio_list"]
     majority_ratio = sum(majority_ratio_list) / len(majority_ratio_list)
     ttrl_metrics["majority_ratio"] = majority_ratio
@@ -210,12 +257,16 @@ def _batch_compute_ttrl_metrics(
     gt_reward: List[float],
     majority_label: List[str],
     gt_label: List[str],
+    answer_correct: List[bool],
+    code_success: List[bool],
     n: int,
 ):
     """
     Compute the TTRL metrics for batch inputs.
     """
     assert len(majority_reward) == len(gt_reward) == len(majority_label) == len(gt_label)
+    assert len(answer_correct) == len(majority_reward)
+    assert len(code_success) == len(majority_reward)
     assert len(majority_reward) % n == 0
     n_prompts = len(majority_reward) // n
     ttrl_metrics = []
@@ -224,6 +275,8 @@ def _batch_compute_ttrl_metrics(
         prompt_gt_reward = gt_reward[i * n:(i + 1) * n]
         prompt_majority_label = majority_label[i * n:(i + 1) * n]
         prompt_gt_label = gt_label[i * n:(i + 1) * n]
+        prompt_answer_correct = answer_correct[i * n:(i + 1) * n]
+        prompt_code_success = code_success[i * n:(i + 1) * n]
 
         assert Counter(prompt_majority_label).most_common(1)[0][1] == n
         assert Counter(prompt_gt_label).most_common(1)[0][1] == n
@@ -231,7 +284,14 @@ def _batch_compute_ttrl_metrics(
         prompt_majority_label = prompt_majority_label[0]
         prompt_gt_label = prompt_gt_label[0]
 
-        ttrl_metric = _prompt_compute_ttrl_metrics(prompt_majority_reward, prompt_gt_reward, prompt_majority_label, prompt_gt_label)
+        ttrl_metric = _prompt_compute_ttrl_metrics(
+            prompt_majority_reward,
+            prompt_gt_reward,
+            prompt_majority_label,
+            prompt_gt_label,
+            prompt_answer_correct,
+            prompt_code_success,
+        )
         ttrl_metrics.append(ttrl_metric)
 
     # Compute the average metrics
@@ -244,22 +304,34 @@ def _prompt_compute_ttrl_metrics(
     gt_reward: List[float],
     majority_label: str,
     gt_label: str,
+    answer_correct: List[bool],
+    code_success: List[bool],
     ):    
     assert len(majority_reward) == len(gt_reward)
+    assert len(answer_correct) == len(majority_reward)
+    assert len(code_success) == len(majority_reward)
 
-    hit_rate = 1.0 if grade(majority_label, gt_label) else 0.0    
+    hit_rate = 1.0 if _answer_reward_like_compute_score(majority_label, gt_label) else 0.0
     rewards_hit_rate = 0
     for estimate_reward, true_reward in zip(majority_reward, gt_reward):
         if estimate_reward == true_reward:
             rewards_hit_rate += 1
     rewards_hit_rate = rewards_hit_rate / len(majority_reward)
+    sample_answer_accuracy = sum(answer_correct) / len(answer_correct)
+    sample_code_pass_rate = sum(code_success) / len(code_success)
+    answer_pass_k = 1.0 if any(answer_correct) else 0.0
+    reward_pass_k = 1.0 if sum(gt_reward) >= 1 else 0.0
     
     ttrl_metric = {
         "label_accuracy": hit_rate,
         "reward_accuracy": rewards_hit_rate,
         "majority_voting_reward": sum(majority_reward) / len(majority_reward),
         "ground_truth_reward": sum(gt_reward) / len(gt_reward),
-        f"pass@{len(majority_reward)}": 1.0 if sum(gt_reward) >= 1 else 0.0,
+        "sample_answer_accuracy": sample_answer_accuracy,
+        "sample_code_pass_rate": sample_code_pass_rate,
+        f"pass@{len(majority_reward)}": answer_pass_k,
+        f"reward_pass@{len(majority_reward)}": reward_pass_k,
+        f"actual_pass@{len(answer_correct)}": answer_pass_k,
     }
     return ttrl_metric
 
