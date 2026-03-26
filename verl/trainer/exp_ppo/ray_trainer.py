@@ -737,7 +737,7 @@ class RayPPOTrainer:
         return {
             key: values
             for key, values in collected_values.items()
-            if len(values) == expected_len and all(value is not None for value in values)
+            if len(values) == expected_len and any(value is not None for value in values)
         }
 
     def _should_dump_rollout_generations(self, is_last_step):
@@ -1333,10 +1333,15 @@ class RayPPOTrainer:
                             assert len(rollout_sol) == len(batch), (len(rollout_sol), len(batch))
                             assert len(rollout_code) == len(batch), (len(rollout_code), len(batch))
 
-                            for i, rollout_item in enumerate(batch):
-                                rollout_item.non_tensor_batch["extra_info"]["solved_objective"] = rollout_obj[i]
-                                rollout_item.non_tensor_batch["extra_info"]["solution"] = rollout_sol[i]
-                                rollout_item.non_tensor_batch["extra_info"]["code_exec_res"] = rollout_code[i]
+                            for i in range(len(batch)):
+                                # DataProto.repeat() shallow-copies object arrays, so repeated
+                                # samples may still alias the same extra_info dict.
+                                extra_info = batch.non_tensor_batch["extra_info"][i] or {}
+                                extra_info = deepcopy(extra_info)
+                                extra_info["solved_objective"] = rollout_obj[i]
+                                extra_info["solution"] = rollout_sol[i]
+                                extra_info["code_exec_res"] = rollout_code[i]
+                                batch.non_tensor_batch["extra_info"][i] = extra_info
                     
                     batch = batch.union(gen_batch_output)
                     
