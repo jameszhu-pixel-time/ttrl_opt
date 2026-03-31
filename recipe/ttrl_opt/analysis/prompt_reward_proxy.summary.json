@@ -1,0 +1,267 @@
+{
+  "prompt_count": 3288,
+  "rollout_count": 105472,
+  "step_count": 103,
+  "class_counts": {
+    "predicted_correct": 2662,
+    "majority_but_wrong": 365,
+    "not_even_sampled": 261
+  },
+  "proxy_metrics": {
+    "accuracy": 0.48175182481751827,
+    "macro_f1": 0.3773189048073334,
+    "per_class": {
+      "predicted_correct": {
+        "precision": 0.9625095638867636,
+        "recall": 0.47257700976709244,
+        "f1": 0.6339128243890149,
+        "support": 2662
+      },
+      "majority_but_wrong": {
+        "precision": 0.16169724770642202,
+        "recall": 0.3863013698630137,
+        "f1": 0.22797089733225545,
+        "support": 365
+      },
+      "not_even_sampled": {
+        "precision": 0.16681695220919748,
+        "recall": 0.7088122605363985,
+        "f1": 0.27007299270072993,
+        "support": 261
+      }
+    },
+    "matrix": {
+      "predicted_correct": {
+        "predicted_correct": 1258,
+        "majority_but_wrong": 700,
+        "not_even_sampled": 704
+      },
+      "majority_but_wrong": {
+        "predicted_correct": 4,
+        "majority_but_wrong": 141,
+        "not_even_sampled": 220
+      },
+      "not_even_sampled": {
+        "predicted_correct": 45,
+        "majority_but_wrong": 31,
+        "not_even_sampled": 185
+      }
+    }
+  },
+  "proxy_thresholds": {
+    "low_observability_cut": -0.03879444206878544,
+    "low_consensus_cut": 0.6104361177328648,
+    "reward_proxy_formula": "reward_proxy = tanh((0.60 * observability_score + 0.40 * consensus_score) / 2.0)",
+    "observability_formula": "0.45*z(numeric_answer_rate) + 0.30*z(execution_success_rate) + 0.15*z(text_answer_extract_rate) + 0.10*z(execution_answer_recovery_rate)",
+    "consensus_formula": "0.55*z(answer_consensus_margin) + 0.25*z(mean_rollout_score) - 0.20*z(answer_diversity_rate)"
+  },
+  "feature_definitions": {
+    "numeric_answer_rate": "Fraction of rollouts whose final observable answer is numeric after combining direct text extraction and local execution recovery.",
+    "text_answer_extract_rate": "Fraction of rollouts where a numeric objective can be parsed directly from the model text output without running the code.",
+    "execution_answer_recovery_rate": "Fraction of rollouts whose final observable answer had to be recovered by local code execution rather than direct text parsing.",
+    "execution_success_rate": "Fraction of rollouts whose generated code finishes with `code_exec_res == Done`.",
+    "answer_consensus_margin": "Prompt-level normalized vote gap: `(top1 answer count - top2 answer count) / num_rollouts`.",
+    "mean_rollout_score": "Mean model score over rollouts under the same prompt. This is an internal model score, not correctness supervision.",
+    "answer_diversity_rate": "Number of unique normalized numeric answers divided by the number of rollouts."
+  },
+  "top_features": [
+    {
+      "feature": "execution_answer_recovery_rate",
+      "feature_label": "Execution answer recovery rate",
+      "separation_score": 1.5087269476267804,
+      "predicted_correct_mean_z": 0.19832447419029361,
+      "majority_but_wrong_mean_z": -0.5093827526784632,
+      "not_even_sampled_mean_z": -1.3104024734364867
+    },
+    {
+      "feature": "numeric_answer_rate",
+      "feature_label": "Numeric answer rate",
+      "separation_score": 1.5087269476267804,
+      "predicted_correct_mean_z": 0.19832447419029361,
+      "majority_but_wrong_mean_z": -0.5093827526784632,
+      "not_even_sampled_mean_z": -1.3104024734364867
+    },
+    {
+      "feature": "text_answer_extract_rate",
+      "feature_label": "Text answer extract rate",
+      "separation_score": 1.5086343961917015,
+      "predicted_correct_mean_z": 0.19802571922957407,
+      "majority_but_wrong_mean_z": -0.5070564380876997,
+      "not_even_sampled_mean_z": -1.3106086769621275
+    },
+    {
+      "feature": "execution_success_rate",
+      "feature_label": "Execution success rate",
+      "separation_score": 1.4698099001174303,
+      "predicted_correct_mean_z": 0.19008472320505806,
+      "majority_but_wrong_mean_z": -0.4712253753362596,
+      "not_even_sampled_mean_z": -1.2797251769123723
+    },
+    {
+      "feature": "answer_consensus_margin",
+      "feature_label": "Answer consensus margin",
+      "separation_score": 1.416430547992535,
+      "predicted_correct_mean_z": 0.25120917844931573,
+      "majority_but_wrong_mean_z": -1.1652213695432192,
+      "not_even_sampled_mean_z": -0.9326169852444567
+    },
+    {
+      "feature": "mean_rollout_score",
+      "feature_label": "Mean rollout score",
+      "separation_score": 1.4114581326259525,
+      "predicted_correct_mean_z": 0.2257114690858516,
+      "majority_but_wrong_mean_z": -0.7982576754043007,
+      "not_even_sampled_mean_z": -1.1857466635401008
+    },
+    {
+      "feature": "answer_diversity_rate",
+      "feature_label": "Answer diversity rate",
+      "separation_score": 1.0201184109230512,
+      "predicted_correct_mean_z": -0.15134767330264212,
+      "majority_but_wrong_mean_z": 0.8687707376204091,
+      "not_even_sampled_mean_z": 0.3286827091961078
+    }
+  ],
+  "proxy_deciles": [
+    {
+      "decile": 1,
+      "count": 328,
+      "reward_proxy_min": -0.8775636282719624,
+      "reward_proxy_max": -0.6053558121039366,
+      "predicted_correct_rate": 0.3902439024390244,
+      "majority_but_wrong_rate": 0.23780487804878048,
+      "not_even_sampled_rate": 0.3719512195121951,
+      "proxy_predicted_correct_rate": 0.0,
+      "proxy_majority_but_wrong_rate": 0.0,
+      "proxy_not_even_sampled_rate": 1.0,
+      "observability_mean": -2.3227402756766615,
+      "consensus_mean": -1.503853822374512
+    },
+    {
+      "decile": 2,
+      "count": 329,
+      "reward_proxy_min": -0.6052002802245166,
+      "reward_proxy_max": -0.38111278841858887,
+      "predicted_correct_rate": 0.6352583586626139,
+      "majority_but_wrong_rate": 0.26443768996960487,
+      "not_even_sampled_rate": 0.10030395136778116,
+      "proxy_predicted_correct_rate": 0.0,
+      "proxy_majority_but_wrong_rate": 0.00911854103343465,
+      "proxy_not_even_sampled_rate": 0.9908814589665653,
+      "observability_mean": -1.0707142187182506,
+      "consensus_mean": -1.1000109086723373
+    },
+    {
+      "decile": 3,
+      "count": 329,
+      "reward_proxy_min": -0.37971334018008723,
+      "reward_proxy_max": -0.14632942371221402,
+      "predicted_correct_rate": 0.6778115501519757,
+      "majority_but_wrong_rate": 0.23100303951367782,
+      "not_even_sampled_rate": 0.0911854103343465,
+      "proxy_predicted_correct_rate": 0.0,
+      "proxy_majority_but_wrong_rate": 0.1519756838905775,
+      "proxy_not_even_sampled_rate": 0.8480243161094225,
+      "observability_mean": -0.36981650979094494,
+      "consensus_mean": -0.7936643791817887
+    },
+    {
+      "decile": 4,
+      "count": 329,
+      "reward_proxy_min": -0.14594041885948494,
+      "reward_proxy_max": 0.04164258477125856,
+      "predicted_correct_rate": 0.817629179331307,
+      "majority_but_wrong_rate": 0.1398176291793313,
+      "not_even_sampled_rate": 0.0425531914893617,
+      "proxy_predicted_correct_rate": 0.0,
+      "proxy_majority_but_wrong_rate": 0.5258358662613982,
+      "proxy_not_even_sampled_rate": 0.47416413373860183,
+      "observability_mean": 0.08574693964604065,
+      "consensus_mean": -0.3566205668385149
+    },
+    {
+      "decile": 5,
+      "count": 329,
+      "reward_proxy_min": 0.04164258477125856,
+      "reward_proxy_max": 0.18082608602288608,
+      "predicted_correct_rate": 0.8358662613981763,
+      "majority_but_wrong_rate": 0.12462006079027356,
+      "not_even_sampled_rate": 0.03951367781155015,
+      "proxy_predicted_correct_rate": 0.0,
+      "proxy_majority_but_wrong_rate": 0.939209726443769,
+      "proxy_not_even_sampled_rate": 0.060790273556231005,
+      "observability_mean": 0.3961543104549046,
+      "consensus_mean": -0.012366481801064503
+    },
+    {
+      "decile": 6,
+      "count": 328,
+      "reward_proxy_min": 0.18139509022330053,
+      "reward_proxy_max": 0.2633641901165392,
+      "predicted_correct_rate": 0.9085365853658537,
+      "majority_but_wrong_rate": 0.06707317073170732,
+      "not_even_sampled_rate": 0.024390243902439025,
+      "proxy_predicted_correct_rate": 0.3323170731707317,
+      "proxy_majority_but_wrong_rate": 0.6676829268292683,
+      "proxy_not_even_sampled_rate": 0.0,
+      "observability_mean": 0.4832925797065102,
+      "consensus_mean": 0.4142366416865305
+    },
+    {
+      "decile": 7,
+      "count": 329,
+      "reward_proxy_min": 0.26410344004721126,
+      "reward_proxy_max": 0.345034509625348,
+      "predicted_correct_rate": 0.9331306990881459,
+      "majority_but_wrong_rate": 0.04559270516717325,
+      "not_even_sampled_rate": 0.02127659574468085,
+      "proxy_predicted_correct_rate": 0.6413373860182371,
+      "proxy_majority_but_wrong_rate": 0.3586626139817629,
+      "proxy_not_even_sampled_rate": 0.0,
+      "observability_mean": 0.6180564685739488,
+      "consensus_mean": 0.6488021394454642
+    },
+    {
+      "decile": 8,
+      "count": 329,
+      "reward_proxy_min": 0.34514524904173083,
+      "reward_proxy_max": 0.3609947014508737,
+      "predicted_correct_rate": 0.9574468085106383,
+      "majority_but_wrong_rate": 0.0,
+      "not_even_sampled_rate": 0.0425531914893617,
+      "proxy_predicted_correct_rate": 1.0,
+      "proxy_majority_but_wrong_rate": 0.0,
+      "proxy_not_even_sampled_rate": 0.0,
+      "observability_mean": 0.6473743045453708,
+      "consensus_mean": 0.8456098918291055
+    },
+    {
+      "decile": 9,
+      "count": 329,
+      "reward_proxy_min": 0.3609947014508737,
+      "reward_proxy_max": 0.3947083864175428,
+      "predicted_correct_rate": 0.9604863221884499,
+      "majority_but_wrong_rate": 0.0,
+      "not_even_sampled_rate": 0.03951367781155015,
+      "proxy_predicted_correct_rate": 1.0,
+      "proxy_majority_but_wrong_rate": 0.0,
+      "proxy_not_even_sampled_rate": 0.0,
+      "observability_mean": 0.7632403688247112,
+      "consensus_mean": 0.913452382127537
+    },
+    {
+      "decile": 10,
+      "count": 329,
+      "reward_proxy_min": 0.3947083864175428,
+      "reward_proxy_max": 0.3947083864175428,
+      "predicted_correct_rate": 0.9787234042553191,
+      "majority_but_wrong_rate": 0.0,
+      "not_even_sampled_rate": 0.02127659574468085,
+      "proxy_predicted_correct_rate": 1.0,
+      "proxy_majority_but_wrong_rate": 0.0,
+      "proxy_not_even_sampled_rate": 0.0,
+      "observability_mean": 0.7638150060028506,
+      "consensus_mean": 0.9411031974553019
+    }
+  ]
+}

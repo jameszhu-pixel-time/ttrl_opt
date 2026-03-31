@@ -1,0 +1,420 @@
+{
+  "input": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/recipe/ttrl_opt/analysis/sampled_traj_semantic.json",
+  "summary": {
+    "abnormal_group_count": 24,
+    "category_counts": {
+      "data_integrity": 16,
+      "review_needed": 8
+    },
+    "reason_counts": {
+      "missing_code_rows": 15,
+      "group_size_anomaly": 2,
+      "bucket_changed": 2,
+      "semantic_code_mismatch_rows": 7,
+      "semantic_obj_mismatch_rows": 7
+    }
+  },
+  "by_step": {
+    "1": {
+      "data_integrity": 1
+    },
+    "2": {
+      "data_integrity": 3
+    },
+    "3": {
+      "data_integrity": 4
+    },
+    "4": {
+      "review_needed": 1,
+      "data_integrity": 2
+    },
+    "5": {
+      "data_integrity": 2
+    },
+    "6": {
+      "review_needed": 1
+    },
+    "9": {
+      "data_integrity": 1,
+      "review_needed": 1
+    },
+    "10": {
+      "review_needed": 2
+    },
+    "11": {
+      "review_needed": 1
+    },
+    "12": {
+      "data_integrity": 1
+    },
+    "13": {
+      "review_needed": 1,
+      "data_integrity": 2
+    },
+    "15": {
+      "review_needed": 1
+    }
+  },
+  "records": [
+    {
+      "step": "1",
+      "prompt_index": 22,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 4,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "2",
+      "prompt_index": 17,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 2,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "2",
+      "prompt_index": 19,
+      "group_size": 64,
+      "abnormal": true,
+      "reasons": "group_size_64|missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 3,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "group_size_anomaly|missing_code_rows"
+    },
+    {
+      "step": "2",
+      "prompt_index": 21,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "others",
+      "local_bucket": "others",
+      "strict_code_mismatch_rows": 5,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "3",
+      "prompt_index": 2,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "others",
+      "local_bucket": "others",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "3",
+      "prompt_index": 8,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 2,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "3",
+      "prompt_index": 15,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 2,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "3",
+      "prompt_index": 31,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "4",
+      "prompt_index": 4,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "4",
+      "prompt_index": 28,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "5",
+      "prompt_index": 12,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "others",
+      "local_bucket": "others",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "5",
+      "prompt_index": 19,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 5,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "9",
+      "prompt_index": 12,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 1,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "12",
+      "prompt_index": 22,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "13",
+      "prompt_index": 24,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "missing_code_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "missing_code_rows"
+    },
+    {
+      "step": "13",
+      "prompt_index": 29,
+      "group_size": 64,
+      "abnormal": true,
+      "reasons": "group_size_64",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "data_integrity",
+      "normalized_reasons": "group_size_anomaly"
+    },
+    {
+      "step": "4",
+      "prompt_index": 0,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "bucket_changed|semantic_code_mismatch_rows_5|semantic_obj_mismatch_rows_2",
+      "logged_bucket": "minor",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 6,
+      "semantic_code_mismatch_rows": 5,
+      "semantic_obj_mismatch_rows": 2,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "review_needed",
+      "normalized_reasons": "bucket_changed|semantic_code_mismatch_rows|semantic_obj_mismatch_rows"
+    },
+    {
+      "step": "6",
+      "prompt_index": 22,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "semantic_code_mismatch_rows_5|semantic_obj_mismatch_rows_1",
+      "logged_bucket": "others",
+      "local_bucket": "others",
+      "strict_code_mismatch_rows": 5,
+      "semantic_code_mismatch_rows": 5,
+      "semantic_obj_mismatch_rows": 1,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "review_needed",
+      "normalized_reasons": "semantic_code_mismatch_rows|semantic_obj_mismatch_rows"
+    },
+    {
+      "step": "9",
+      "prompt_index": 22,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "bucket_changed|semantic_code_mismatch_rows_1|semantic_obj_mismatch_rows_1",
+      "logged_bucket": "minor",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 3,
+      "semantic_code_mismatch_rows": 1,
+      "semantic_obj_mismatch_rows": 1,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "review_needed",
+      "normalized_reasons": "bucket_changed|semantic_code_mismatch_rows|semantic_obj_mismatch_rows"
+    },
+    {
+      "step": "10",
+      "prompt_index": 13,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "semantic_code_mismatch_rows_1",
+      "logged_bucket": "minor",
+      "local_bucket": "minor",
+      "strict_code_mismatch_rows": 7,
+      "semantic_code_mismatch_rows": 1,
+      "semantic_obj_mismatch_rows": 0,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "review_needed",
+      "normalized_reasons": "semantic_code_mismatch_rows"
+    },
+    {
+      "step": "10",
+      "prompt_index": 15,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "semantic_code_mismatch_rows_1|semantic_obj_mismatch_rows_1",
+      "logged_bucket": "maj",
+      "local_bucket": "maj",
+      "strict_code_mismatch_rows": 1,
+      "semantic_code_mismatch_rows": 1,
+      "semantic_obj_mismatch_rows": 1,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "review_needed",
+      "normalized_reasons": "semantic_code_mismatch_rows|semantic_obj_mismatch_rows"
+    },
+    {
+      "step": "11",
+      "prompt_index": 21,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "semantic_obj_mismatch_rows_1",
+      "logged_bucket": "minor",
+      "local_bucket": "minor",
+      "strict_code_mismatch_rows": 0,
+      "semantic_code_mismatch_rows": 0,
+      "semantic_obj_mismatch_rows": 1,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "review_needed",
+      "normalized_reasons": "semantic_obj_mismatch_rows"
+    },
+    {
+      "step": "13",
+      "prompt_index": 15,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "semantic_code_mismatch_rows_1|semantic_obj_mismatch_rows_1",
+      "logged_bucket": "minor",
+      "local_bucket": "minor",
+      "strict_code_mismatch_rows": 2,
+      "semantic_code_mismatch_rows": 1,
+      "semantic_obj_mismatch_rows": 1,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "review_needed",
+      "normalized_reasons": "semantic_code_mismatch_rows|semantic_obj_mismatch_rows"
+    },
+    {
+      "step": "15",
+      "prompt_index": 10,
+      "group_size": 32,
+      "abnormal": true,
+      "reasons": "semantic_code_mismatch_rows_2|semantic_obj_mismatch_rows_1",
+      "logged_bucket": "minor",
+      "local_bucket": "minor",
+      "strict_code_mismatch_rows": 2,
+      "semantic_code_mismatch_rows": 2,
+      "semantic_obj_mismatch_rows": 1,
+      "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+      "category": "review_needed",
+      "normalized_reasons": "semantic_code_mismatch_rows|semantic_obj_mismatch_rows"
+    }
+  ]
+}

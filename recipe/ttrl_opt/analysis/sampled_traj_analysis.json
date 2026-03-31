@@ -1,0 +1,1804 @@
+{
+  "input_dir": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj",
+  "summary": {
+    "step_count": 18,
+    "steps": [
+      "1",
+      "2",
+      "3",
+      "4",
+      "5",
+      "6",
+      "7",
+      "8",
+      "9",
+      "10",
+      "11",
+      "12",
+      "13",
+      "14",
+      "15",
+      "16",
+      "17",
+      "18"
+    ],
+    "total_prompt_count": 574,
+    "total_row_count": 18432,
+    "logged_prompt_buckets": {
+      "maj": 463,
+      "minor": 70,
+      "others": 41
+    },
+    "local_prompt_buckets": {
+      "maj": 463,
+      "minor": 64,
+      "others": 47
+    },
+    "json_issues": {
+      "invalid_json_line_count": 0,
+      "missing_key_row_count": 0
+    },
+    "remote_local_mismatch": {
+      "code_exec_res_mismatch_count": 349,
+      "solved_objective_mismatch_count": 90
+    }
+  },
+  "steps": [
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/1.jsonl",
+      "step_from_filename": "1",
+      "step_values_in_rows": [
+        1
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 30,
+        "minor": 2,
+        "others": 0
+      },
+      "local_prompt_buckets": {
+        "maj": 30,
+        "minor": 2,
+        "others": 0
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 57,
+        "solved_objective_mismatch_count": 0,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 3,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a **community policing patrol optimization problem** involving:\n\n- **2 community areas**: $ i \\in \\{0, 1\\} $\n- **2 patrol units**: $ j \\in \\{0, 1\\} $\n\n---\n\n###"
+          },
+          {
+            "row_index": 10,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nLet us model this problem step by step in a structured mathematical framework.\n\n---\n\n### **Sets and Time Periods**\n\nLet the time period (months) be indexed by $ t \\in \\{1, "
+          },
+          {
+            "row_index": 20,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a time-coupled unit commitment problem with 5 time periods (hours), 3 units, and operational constraints including startup costs, output limits, demand satisfa"
+          },
+          {
+            "row_index": 66,
+            "logged_code_exec_res": "ImportError: cannot import name 'quickstart' from 'gurobipy' (/home/chenyitian/anaconda3/envs/ttrl/lib/python3.10/site-packages/gurobipy/__init__.py)",
+            "local_exec_report": "ImportError: cannot import name 'quickstart' from 'gurobipy' (/Users/zhurui/anaconda3/lib/python3.11/site-packages/gurobipy/__init__.py)",
+            "output_preview": "<model>\nWe are given a set covering problem with the objective of minimizing total training duration while ensuring all 15 critical operational skills are covered.\n\n---\n\n### **Step"
+          },
+          {
+            "row_index": 69,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "We are given a **mathematical optimization problem** aimed at designing **personalized, cost-effective treatment pathways** for two chronic disease patients over two time periods, "
+          }
+        ],
+        "solved_objective_mismatch_examples": []
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1023,
+        "num_unique_codes": 1022,
+        "executed_unique_codes": 1022,
+        "missing_code": 1,
+        "success_with_obj": 476,
+        "success_without_obj": 7,
+        "failed_execution": 539
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/2.jsonl",
+      "step_from_filename": "2",
+      "step_values_in_rows": [
+        2
+      ],
+      "row_count": 1024,
+      "prompt_count": 31,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 23,
+        "minor": 4,
+        "others": 4
+      },
+      "local_prompt_buckets": {
+        "maj": 23,
+        "minor": 4,
+        "others": 4
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 58,
+        "solved_objective_mismatch_count": 0,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 69,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with formulating a comprehensive **linear programming (LP)** optimization model to maximize Ironclad Steel Inc.'s total profit over six months, subject to pro"
+          },
+          {
+            "row_index": 79,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this **mathematical modeling problem** step by step, following the structure required for optimization with Gurobi.\n\n---\n\n## 🔍 Step 1: Problem Understanding\n\nWe are to "
+          },
+          {
+            "row_index": 85,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<analysis>\nWe are given a **Class Size Distribution Optimization Problem** involving two classes, with the goal of maximizing a weighted sum of students across classes, subject to "
+          },
+          {
+            "row_index": 89,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a resource allocation optimization problem in the context of two construction projects. The goal is to allocate funds, manpower, "
+          },
+          {
+            "row_index": 126,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this step by step using mathematical modeling and then implement the solution in Gurobi.\n\n---\n\n### 🚩 Step 1: Understand the Problem\n\nWe are solving a **transportation p"
+          }
+        ],
+        "solved_objective_mismatch_examples": []
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1021,
+        "num_unique_codes": 1019,
+        "executed_unique_codes": 1019,
+        "missing_code": 3,
+        "success_with_obj": 461,
+        "success_without_obj": 27,
+        "failed_execution": 531
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/3.jsonl",
+      "step_from_filename": "3",
+      "step_values_in_rows": [
+        3
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 23,
+        "minor": 6,
+        "others": 3
+      },
+      "local_prompt_buckets": {
+        "maj": 23,
+        "minor": 5,
+        "others": 4
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 51,
+        "solved_objective_mismatch_count": 3,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 3,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this step by step.\n\n---\n\n### 🔍 **Step 1: Understand the Problem**\n\nWe are given a **symmetric complete travel time network** involving:\n\n- 1 central depot (D)\n- 6 senso"
+          },
+          {
+            "row_index": 49,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with formulating and solving an **inventory optimization problem** for SunPower Solutions over a 6-month horizon. The goal is to **minimize total inventory co"
+          },
+          {
+            "row_index": 60,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this **mathematical modeling problem** step by step, ensuring we fully understand the structure, identify the missing link in the renewable energy ratio, and build a co"
+          },
+          {
+            "row_index": 61,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this **load balance optimization problem in a power grid** step by step, carefully analyzing the structure, identifying missing or ambiguous components, and then formul"
+          },
+          {
+            "row_index": 108,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a **job shop scheduling problem** with the objective of **minimizing the makespan** — i.e., the total time required to complete all operations across all machi"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 133,
+            "logged_solved_objective": 0.09846011505495139,
+            "local_obj_result": 0.09846019437915449,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **portfolio optimization problem** under constraints involving **expected return maximization** and **risk (variance) control**"
+          },
+          {
+            "row_index": 383,
+            "logged_solved_objective": 0.09846011505495139,
+            "local_obj_result": 0.09846019437915449,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "Let's solve this **mathematical optimization problem** step by step, following a structured approach.\n\n---\n\n## 🧠 Step 1: Understanding the Problem\n\nWe are asked to **maximize the e"
+          },
+          {
+            "row_index": 634,
+            "logged_solved_objective": 9.846019917517264,
+            "local_obj_result": 9.846019635506472,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a multi-project portfolio optimization problem where NuFuture Energy Corporation must allocate $100 million across three investment projects to **maximize expe"
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1020,
+        "num_unique_codes": 1012,
+        "executed_unique_codes": 1012,
+        "missing_code": 4,
+        "success_with_obj": 515,
+        "success_without_obj": 42,
+        "failed_execution": 455
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/4.jsonl",
+      "step_from_filename": "4",
+      "step_values_in_rows": [
+        4
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 27,
+        "minor": 2,
+        "others": 3
+      },
+      "local_prompt_buckets": {
+        "maj": 27,
+        "minor": 0,
+        "others": 5
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 45,
+        "solved_objective_mismatch_count": 27,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 52,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<analysis>\nWe are given a land use planning problem with two plots and two crops. The goal is to **maximize total agricultural output**, subject to several realistic agricultural c"
+          },
+          {
+            "row_index": 54,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a land use planning problem involving 2 plots of land and 2 types of crops. The goal is to **maximize total agricultural output**, subject to several realistic"
+          },
+          {
+            "row_index": 130,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's tackle this **Green Acres Farm optimization problem** step by step, as requested. We will build a **comprehensive mathematical model**, then provide the corresponding **Gurob"
+          },
+          {
+            "row_index": 133,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this **military logistics distribution optimization problem** step by step, following the structure:\n\n---\n\n## 🔍 Step 1: Problem Understanding\n\nWe are optimizing the **d"
+          },
+          {
+            "row_index": 187,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'tuple'",
+            "output_preview": "Let's solve this **mathematical modeling and optimization problem** step-by-step, following a structured approach to build an accurate and solvable model using Gurobi.\n\n---\n\n## 🔍 *"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 98,
+            "logged_solved_objective": 0.12439708999031973,
+            "local_obj_result": 0.12439773758912791,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<p align=\"center\"><b>Step-by-Step Solution to the Investment Portfolio Optimization Problem</b></p>\n\n---\n\n## 🔍 Step 1: Understand the Problem\n\nWe are tasked with **maximizing the e"
+          },
+          {
+            "row_index": 99,
+            "logged_solved_objective": 0.12439708999031973,
+            "local_obj_result": 0.12439773758912791,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "Certainly! Let's solve this **portfolio optimization problem** step by step, using mathematical modeling and then implement it in **Gurobi Python**.\n\n---\n\n## 🔍 Step 1: Problem Unde"
+          },
+          {
+            "row_index": 117,
+            "logged_solved_objective": 0.13049183019322835,
+            "local_obj_result": 0.13049187898183684,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a **portfolio optimization problem** where the goal is to **maximize expected return** subject to a **risk constraint** on the portfolio variance.\n\n---\n\n### St"
+          },
+          {
+            "row_index": 118,
+            "logged_solved_objective": 0.12014448709322167,
+            "local_obj_result": 0.1201444673517113,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are tasked with maximizing the expected annual return of an investment portfolio subject to a **risk constraint** on total portfolio variance and non-negativity of alloc"
+          },
+          {
+            "row_index": 119,
+            "logged_solved_objective": 0.1303692810875524,
+            "local_obj_result": 0.13036925719748524,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a **portfolio optimization problem** where the goal is to **maximize expected return** under a **risk constraint** (total portfolio variance ≤ 0.03), with **no"
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1022,
+        "num_unique_codes": 1022,
+        "executed_unique_codes": 1022,
+        "missing_code": 2,
+        "success_with_obj": 587,
+        "success_without_obj": 16,
+        "failed_execution": 419
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/5.jsonl",
+      "step_from_filename": "5",
+      "step_values_in_rows": [
+        5
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 26,
+        "minor": 5,
+        "others": 1
+      },
+      "local_prompt_buckets": {
+        "maj": 26,
+        "minor": 5,
+        "others": 1
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 27,
+        "solved_objective_mismatch_count": 0,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 56,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a **Traveling Salesman Problem (TSP)** with a fixed starting point (Central Quality Control Laboratory — CL) and a requirement to visit all other five units ex"
+          },
+          {
+            "row_index": 85,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this **Quality Control Optimization Problem** step by step, following the structure you requested:\n\n---\n\n## 🚩 Step 1: Problem Analysis\n\nWe are assigning two product typ"
+          },
+          {
+            "row_index": 89,
+            "logged_code_exec_res": "SyntaxError: f-string: empty expression not allowed",
+            "local_exec_report": "SyntaxError: f-string: expression required before ':'",
+            "output_preview": "<model>\nWe are tasked with developing a **cash replenishment optimization model** for Global Trust Bank to minimize total costs (ordering, holding, and shortage) over five business"
+          },
+          {
+            "row_index": 140,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\n### Mathematical Model\n\n#### **Sets**\n- $ T = \\{0, 1, 2, 3, 4\\} $: Set of time periods (discrete periods from 0 to 4).\n- $ I = \\{0, 1\\} $: Set of devices (Device 0 and Devi"
+          },
+          {
+            "row_index": 150,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this **drug inventory optimization problem** step-by-step, following a structured approach to build the correct mathematical model and then implement it using **Gurobi*"
+          }
+        ],
+        "solved_objective_mismatch_examples": []
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1022,
+        "num_unique_codes": 1018,
+        "executed_unique_codes": 1018,
+        "missing_code": 2,
+        "success_with_obj": 738,
+        "success_without_obj": 7,
+        "failed_execution": 273
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/6.jsonl",
+      "step_from_filename": "6",
+      "step_values_in_rows": [
+        6
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 24,
+        "minor": 3,
+        "others": 5
+      },
+      "local_prompt_buckets": {
+        "maj": 24,
+        "minor": 2,
+        "others": 6
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 20,
+        "solved_objective_mismatch_count": 4,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 4,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a **Set Covering Problem** (SCP), a classic optimization problem in operations research where the goal is to select the minimum-cost subset of sets (here, serv"
+          },
+          {
+            "row_index": 60,
+            "logged_code_exec_res": "numpy._core._exceptions._UFuncNoLoopError: ufunc 'subtract' did not contain a loop with signature matching types (dtype('float64'), dtype('<U17')) -> None",
+            "local_exec_report": "numpy.core._exceptions._UFuncNoLoopError: ufunc 'subtract' did not contain a loop with signature matching types (dtype('float64'), dtype('<U17')) -> None",
+            "output_preview": "Let's solve this step-by-step using **mathematical modeling** and then implement it in **Gurobi Python**.\n\n---\n\n## 🔍 Step 1: Problem Understanding\n\nWe are to **maximize the expecte"
+          },
+          {
+            "row_index": 130,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'tuple'",
+            "output_preview": "<model>\n### Mathematical Model for OceanLink Logistics Supply Chain Optimization\n\n---\n\n#### **1. Sets**\n\n- $ S = \\{ \\text{APH}, \\text{EPH} \\} $: Set of production hubs (suppliers)\n"
+          },
+          {
+            "row_index": 141,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'tuple'",
+            "output_preview": "<model>\n### Mathematical Model for OceanLink Logistics Supply Chain Optimization\n\n#### **1. Sets and Parameters**\n\n- **Suppliers (S):**  \n  $ S = \\{ \\text{APH}, \\text{EPH} \\} $\n\n- "
+          },
+          {
+            "row_index": 178,
+            "logged_code_exec_res": "AttributeError: module 'numpy' has no attribute 'math'",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a waiting line (queueing) problem that can be modeled as an **M/M/c queue**, where:\n\n- **M** = Poisson arrivals, exponential service times\n- **c** = number of "
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 62,
+            "logged_solved_objective": 13.899999836624591,
+            "local_obj_result": 13.89999976030837,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **portfolio optimization problem** under uncertainty, where the goal is to **maximize expected public benefit** subject to budg"
+          },
+          {
+            "row_index": 69,
+            "logged_solved_objective": 0.13899999848741243,
+            "local_obj_result": 0.1389999881673838,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a multi-objective, risk-aware investment allocation problem for a Public Transit Authority (PTA). The goal is to **maximize the expected public benefit** while"
+          },
+          {
+            "row_index": 315,
+            "logged_solved_objective": 13.899999839222037,
+            "local_obj_result": 13.899999820619168,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a **multi-project budget allocation problem** under uncertainty, where the goal is to **maximize the expected public benefit** subject to constraints on total "
+          },
+          {
+            "row_index": 439,
+            "logged_solved_objective": null,
+            "local_obj_result": 78.555555556,
+            "logged_code_exec_res": "AttributeError: module 'numpy' has no attribute 'math'",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a **single-server queueing system** (originally modeled as a **M/M/s queue**), where:\n\n---\n\n### **1. Sets**\n- $ s \\in \\{0, 1, 2, 3, 4, 5\\} $: number of cashier"
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 686,
+        "success_without_obj": 24,
+        "failed_execution": 314
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/7.jsonl",
+      "step_from_filename": "7",
+      "step_values_in_rows": [
+        7
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 25,
+        "minor": 4,
+        "others": 3
+      },
+      "local_prompt_buckets": {
+        "maj": 25,
+        "minor": 4,
+        "others": 3
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 9,
+        "solved_objective_mismatch_count": 0,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 264,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Certainly! Let's solve the given **construction site material allocation problem** step by step, building a proper mathematical model and then solving it using **Gurobi** in Python"
+          },
+          {
+            "row_index": 335,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with formulating a **network design and transportation optimization** problem to minimize total cost (fixed setup + variable transport) while satisfying all d"
+          },
+          {
+            "row_index": 351,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Let's solve this **mathematical modeling problem** step by step, following your detailed description.\n\n---\n\n## 🔍 Step 1: Problem Understanding\n\nWe are optimizing the deployment of "
+          },
+          {
+            "row_index": 441,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a combinatorial optimization problem where Global Capital Investments must select **exactly three** out of **ten potential locations** (L1 through L10) to esta"
+          },
+          {
+            "row_index": 543,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with formulating and solving an **optimal capacity acquisition and holding cost minimization** problem for CareSure Insurance over a 6-month horizon (January "
+          }
+        ],
+        "solved_objective_mismatch_examples": []
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1023,
+        "executed_unique_codes": 1023,
+        "missing_code": 0,
+        "success_with_obj": 777,
+        "success_without_obj": 1,
+        "failed_execution": 245
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/8.jsonl",
+      "step_from_filename": "8",
+      "step_values_in_rows": [
+        8
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 26,
+        "minor": 2,
+        "others": 4
+      },
+      "local_prompt_buckets": {
+        "maj": 26,
+        "minor": 2,
+        "others": 4
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 8,
+        "solved_objective_mismatch_count": 1,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 55,
+            "logged_code_exec_res": "ImportError: cannot import name 'addVar' from 'gurobipy' (/home/chenyitian/anaconda3/envs/ttrl/lib/python3.10/site-packages/gurobipy/__init__.py)",
+            "local_exec_report": "ImportError: cannot import name 'addVar' from 'gurobipy' (/Users/zhurui/anaconda3/lib/python3.11/site-packages/gurobipy/__init__.py)",
+            "output_preview": "<model>\nWe are given a multi-period, multi-area urban heating network optimization problem with energy procurement and heat supply decisions. Let's develop a complete mathematical "
+          },
+          {
+            "row_index": 60,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a mixed-integer (or continuous) optimization model for an urban heating network over two time periods and two heating areas, with"
+          },
+          {
+            "row_index": 67,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\n### Mathematical Model for EduSphere Online Learning Course Selection\n\n#### **Sets**\n- $ T = \\{T_1, T_2, T_3, T_4, T_5, T_6\\} $: Set of essential learning topics  \n  - $ T_"
+          },
+          {
+            "row_index": 224,
+            "logged_code_exec_res": "KeyError: ('ECM-500', 'M3', 1)",
+            "local_exec_report": "KeyError: ('ECM-500', 'M1', 1)",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **production planning optimization problem** for Sentinel Defense Systems over three months. The goal is to **minimize total pr"
+          },
+          {
+            "row_index": 407,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "Sure! Let's solve this **mathematical modeling problem** step by step, following the structure you requested:\n\n---\n\n## 🔍 Step 1: Problem Understanding & Key Components\n\nWe are opti"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 78,
+            "logged_solved_objective": 0.9847494539308669,
+            "local_obj_result": 0.984749453593527,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are tasked with evaluating the **relative efficiency** of five ground stations — Alpha, Beta, Gamma, Delta, and Epsilon — using **Data Envelopment Analysis (DEA)**, a we"
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 732,
+        "success_without_obj": 14,
+        "failed_execution": 278
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/9.jsonl",
+      "step_from_filename": "9",
+      "step_values_in_rows": [
+        9
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 24,
+        "minor": 5,
+        "others": 3
+      },
+      "local_prompt_buckets": {
+        "maj": 25,
+        "minor": 4,
+        "others": 3
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 16,
+        "solved_objective_mismatch_count": 1,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 78,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'str'",
+            "output_preview": "<model>\n### Mathematical Model for HydroFlow Solutions Supply Chain Optimization\n\n---\n\n#### **1. Sets**\n\n- $ S = \\{A, B, C\\} $: Set of suppliers  \n- $ H = \\{H1, H2\\} $: Set of asse"
+          },
+          {
+            "row_index": 465,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a complex logistics network design and distribution problem involving **hub location** and **flow optimization** with both **fixed establishment costs**, **var"
+          },
+          {
+            "row_index": 487,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<analysis>\nWe are tasked with scheduling six workshops to maximize total **educational impact** while respecting:\n\n- Time slot availability (only 6 slots total — one per day, two p"
+          },
+          {
+            "row_index": 538,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a production scheduling problem where we must assign four essential tasks (J1–J4) to three manufacturing cells (C1–C3) over three shifts (Shift 1–3), with the "
+          },
+          {
+            "row_index": 618,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<p>Let's solve the insurance sales channel optimization problem step by step, following a structured mathematical modeling approach.</p>\n\n---\n\n### <step>Step 1: Problem Understandi"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 690,
+            "logged_solved_objective": null,
+            "local_obj_result": 48550.0,
+            "logged_code_exec_res": "ModuleNotFoundError: No module named 'gekko'",
+            "local_exec_report": "Done",
+            "output_preview": "<modelo>\nWe are tasked with formulating a **minimum-cost flow problem** to determine the optimal shipping plan for ForestFlow Logistics. This is a classic **transportation problem "
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1023,
+        "num_unique_codes": 1023,
+        "executed_unique_codes": 1023,
+        "missing_code": 1,
+        "success_with_obj": 710,
+        "success_without_obj": 1,
+        "failed_execution": 312
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/10.jsonl",
+      "step_from_filename": "10",
+      "step_values_in_rows": [
+        10
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 27,
+        "minor": 4,
+        "others": 1
+      },
+      "local_prompt_buckets": {
+        "maj": 27,
+        "minor": 4,
+        "others": 1
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 18,
+        "solved_objective_mismatch_count": 1,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 43,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<modelo>\nWe are given a multi-period production planning problem with setup, production, and inventory holding costs. The goal is to minimize total cost while satisfying monthly de"
+          },
+          {
+            "row_index": 61,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with creating a mathematical model to **maximize total enrollment potential** subject to budget and spending constraints for five advertising channels.\n\n---\n\n"
+          },
+          {
+            "row_index": 111,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'str'",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **network design and flow optimization problem** under capacity and demand constraints. This is a classic **Facility Location a"
+          },
+          {
+            "row_index": 150,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\n### Mathematical Model for Global Air Freight's Ground Distribution Network\n\n---\n\n#### **Sets**\n\n- $ H $: Set of potential hubs  \n  $ H = \\{A, B, C\\} $\n\n- $ M $: Set of met"
+          },
+          {
+            "row_index": 218,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a multi-period production planning problem over six months (January to June), with three facilities (A, B, C), each having different fixed costs, variable prod"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 383,
+            "logged_solved_objective": null,
+            "local_obj_result": 477.0,
+            "logged_code_exec_res": "ModuleNotFoundError: No module named 'pyomo'",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are tasked with creating a mathematical model to minimize StreamFlix’s total daily energy cost by optimally distributing the processing load between two data centers (DC"
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 800,
+        "success_without_obj": 5,
+        "failed_execution": 219
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/11.jsonl",
+      "step_from_filename": "11",
+      "step_values_in_rows": [
+        11
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 27,
+        "minor": 4,
+        "others": 1
+      },
+      "local_prompt_buckets": {
+        "maj": 26,
+        "minor": 4,
+        "others": 2
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 8,
+        "solved_objective_mismatch_count": 25,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 7,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a scheduling and assignment problem where the goal is to **minimize total operational cost** while satisfying constraints on robot capacity, deadlines, and tas"
+          },
+          {
+            "row_index": 250,
+            "logged_code_exec_res": "UnboundLocalError: local variable 'd' referenced before assignment",
+            "local_exec_report": "UnboundLocalError: cannot access local variable 'd' where it is not associated with a value",
+            "output_preview": "<model>\nWe are solving a **multi-objective supply chain optimization problem** with **resilience constraints** to deal with potential disruptions. The goal is to **minimize total c"
+          },
+          {
+            "row_index": 263,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a **bin packing problem** where:\n\n- Each \"bin\" is a **Voyager satellite bus** with a **maximum capacity of 70 kg**.\n- There are **multiple types of payload mod"
+          },
+          {
+            "row_index": 562,
+            "logged_code_exec_res": "numpy._core._exceptions._UFuncNoLoopError: ufunc 'subtract' did not contain a loop with signature matching types (dtype('float64'), dtype('<U15')) -> None",
+            "local_exec_report": "numpy.core._exceptions._UFuncNoLoopError: ufunc 'subtract' did not contain a loop with signature matching types (dtype('float64'), dtype('<U15')) -> None",
+            "output_preview": "<model>\nWe are tasked with solving a **portfolio optimization problem** under **risk constraints**, where the goal is to **maximize expected return** subject to a **cap on portfoli"
+          },
+          {
+            "row_index": 599,
+            "logged_code_exec_res": "timeout_decorator.timeout_decorator.TimeoutError: 'Timed Out'",
+            "local_exec_report": "Timeout Error",
+            "output_preview": "<analysis>\nWe are given a project scheduling problem involving multiple stages (nodes) and transitions (arcs) between them, each with a duration. The goal is to **minimize the tota"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 42,
+            "logged_solved_objective": 0.1083173542438389,
+            "local_obj_result": 0.10831743060266526,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a portfolio optimization problem where SwiftShip Express must allocate a budget across four logistics initiatives to **maximize expected financial return** whi"
+          },
+          {
+            "row_index": 43,
+            "logged_solved_objective": 0.10831741247552429,
+            "local_obj_result": 0.10831720552891408,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a **portfolio optimization problem** where SwiftShip Express wants to allocate its budget across four logistics initiatives to **maximize expected return** whi"
+          },
+          {
+            "row_index": 45,
+            "logged_solved_objective": 0.10831741247552429,
+            "local_obj_result": 0.10831720552891408,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a **portfolio optimization** problem where SwiftShip Express wants to allocate its budget across four logistics initiatives to **maximize expected return** whi"
+          },
+          {
+            "row_index": 46,
+            "logged_solved_objective": 0.10831741247552429,
+            "local_obj_result": 0.10831720552891408,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a portfolio optimization problem where SwiftShip Express wants to allocate a budget across four logistics initiatives to **maximize expected financial return**"
+          },
+          {
+            "row_index": 47,
+            "logged_solved_objective": 0.10831741247552429,
+            "local_obj_result": 0.10831720552891408,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are given a **portfolio optimization** problem where SwiftShip Express must allocate its budget across four logistics initiatives to **maximize expected return** while *"
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 858,
+        "success_without_obj": 0,
+        "failed_execution": 166
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/12.jsonl",
+      "step_from_filename": "12",
+      "step_values_in_rows": [
+        12
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 28,
+        "minor": 2,
+        "others": 2
+      },
+      "local_prompt_buckets": {
+        "maj": 28,
+        "minor": 2,
+        "others": 2
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 3,
+        "solved_objective_mismatch_count": 0,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 480,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with solving a travel insurance pricing optimization problem using mathematical modeling. Let's proceed step by step to formalize the problem.\n\n---\n\n### **Set"
+          },
+          {
+            "row_index": 484,
+            "logged_code_exec_res": "SyntaxError: invalid syntax",
+            "local_exec_report": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "output_preview": "<model>\nWe are tasked with formulating a **multi-period, multi-location supply chain optimization model** to minimize total costs (transportation + inventory holding) while fulfill"
+          },
+          {
+            "row_index": 519,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **scheduling optimization problem** for a training program at MediTech Innovations, with the goal of **minimizing the total num"
+          }
+        ],
+        "solved_objective_mismatch_examples": []
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1023,
+        "num_unique_codes": 1023,
+        "executed_unique_codes": 1023,
+        "missing_code": 1,
+        "success_with_obj": 840,
+        "success_without_obj": 0,
+        "failed_execution": 183
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/13.jsonl",
+      "step_from_filename": "13",
+      "step_values_in_rows": [
+        13
+      ],
+      "row_count": 1024,
+      "prompt_count": 31,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 23,
+        "minor": 6,
+        "others": 2
+      },
+      "local_prompt_buckets": {
+        "maj": 23,
+        "minor": 6,
+        "others": 2
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 9,
+        "solved_objective_mismatch_count": 1,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 134,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with selecting **exactly three locations** (out of 10) such that the **minimum distance between any two selected locations is maximized**.\n\n---\n\n### Step 1: P"
+          },
+          {
+            "row_index": 142,
+            "logged_code_exec_res": "ImportError: cannot import name 'quickfix' from 'gurobipy' (/home/chenyitian/anaconda3/envs/ttrl/lib/python3.10/site-packages/gurobipy/__init__.py)",
+            "local_exec_report": "ImportError: cannot import name 'quickfix' from 'gurobipy' (/Users/zhurui/anaconda3/lib/python3.11/site-packages/gurobipy/__init__.py)",
+            "output_preview": "<model>\nWe are given a single base station cluster with a fixed energy demand across three time periods during a 24-hour day. The goal is to **minimize the total cost of energy** w"
+          },
+          {
+            "row_index": 165,
+            "logged_code_exec_res": "timeout_decorator.timeout_decorator.TimeoutError: 'Timed Out'",
+            "local_exec_report": "Timeout Error",
+            "output_preview": "<model>\nWe are given a **Traveling Salesman Problem (TSP)** with a central depot and 6 sensor clusters. The technician must:\n\n- Start at the central depot (D),\n- Visit each of the "
+          },
+          {
+            "row_index": 573,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'tuple'",
+            "output_preview": "<model>\n### Mathematical Model for GlobalGadgets' Supply Chain Optimization\n\n---\n\n#### **Sets**\n\n- $ S = \\{S1, S2\\} $: Set of suppliers  \n- $ M = \\{M1, M2\\} $: Set of manufacturers"
+          },
+          {
+            "row_index": 646,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+            "output_preview": "<model>\nWe are given a problem of selecting **three locations** among 10 potential ones (L1 to L10) such that the **minimum distance between any two of the selected locations is ma"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 646,
+            "logged_solved_objective": 25.0,
+            "local_obj_result": null,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+            "output_preview": "<model>\nWe are given a problem of selecting **three locations** among 10 potential ones (L1 to L10) such that the **minimum distance between any two of the selected locations is ma"
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1023,
+        "num_unique_codes": 1023,
+        "executed_unique_codes": 1023,
+        "missing_code": 1,
+        "success_with_obj": 807,
+        "success_without_obj": 16,
+        "failed_execution": 200
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/14.jsonl",
+      "step_from_filename": "14",
+      "step_values_in_rows": [
+        14
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 26,
+        "minor": 5,
+        "others": 1
+      },
+      "local_prompt_buckets": {
+        "maj": 26,
+        "minor": 5,
+        "others": 1
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 3,
+        "solved_objective_mismatch_count": 0,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 59,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with maximizing the energy conversion efficiency $ Z $ of photovoltaic cells, based on an empirical quadratic model involving three process parameters:\n\n### S"
+          },
+          {
+            "row_index": 469,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **Mixed-Integer Linear Programming (MILP)** model to minimize the total production cost for Global Health Pharma (GHP) over the"
+          },
+          {
+            "row_index": 885,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a linear optimization problem involving two marine resource areas, with decision variables $ F[1] $ and $ F[2] $ representing the level of fishing activity in "
+          }
+        ],
+        "solved_objective_mismatch_examples": []
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 826,
+        "success_without_obj": 0,
+        "failed_execution": 198
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/15.jsonl",
+      "step_from_filename": "15",
+      "step_values_in_rows": [
+        15
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 24,
+        "minor": 7,
+        "others": 1
+      },
+      "local_prompt_buckets": {
+        "maj": 24,
+        "minor": 7,
+        "others": 1
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 7,
+        "solved_objective_mismatch_count": 1,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 60,
+            "logged_code_exec_res": "timeout_decorator.timeout_decorator.TimeoutError: 'Timed Out'",
+            "local_exec_report": "Timeout Error",
+            "output_preview": "<model>\nWe are given a symmetric distance matrix for a delivery problem involving a drone that starts and ends at the **Distribution Center (Depot)** and must visit **five distinct"
+          },
+          {
+            "row_index": 135,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are tasked with creating a **staff allocation model** to minimize the total operational cost while meeting demand across four work categories and respecting both total a"
+          },
+          {
+            "row_index": 307,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a symmetric distance matrix between the **Distribution Center (Depot)** and **five customer locations**: A, B, C, D, and E. The goal is to find the **shortest "
+          },
+          {
+            "row_index": 332,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+            "output_preview": "<model>\nWe are tasked with selecting **exactly three** sites out of 10 (labeled S1 to S10) for the new Virtual Reality Adventure Zones (VRAZs), such that the **minimum distance bet"
+          },
+          {
+            "row_index": 336,
+            "logged_code_exec_res": "AttributeError: Unable to retrieve attribute 'X'",
+            "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+            "output_preview": "<model>\nWe are tasked with selecting **three sites** out of **10 potential sites (S1 to S10)** such that the **minimum distance between any pair of selected sites is maximized**.\n\n"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 332,
+            "logged_solved_objective": 100.0,
+            "local_obj_result": null,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+            "output_preview": "<model>\nWe are tasked with selecting **exactly three** sites out of 10 (labeled S1 to S10) for the new Virtual Reality Adventure Zones (VRAZs), such that the **minimum distance bet"
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 850,
+        "success_without_obj": 2,
+        "failed_execution": 172
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/16.jsonl",
+      "step_from_filename": "16",
+      "step_values_in_rows": [
+        16
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 26,
+        "minor": 3,
+        "others": 3
+      },
+      "local_prompt_buckets": {
+        "maj": 26,
+        "minor": 3,
+        "others": 3
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 3,
+        "solved_objective_mismatch_count": 0,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 102,
+            "logged_code_exec_res": "UnboundLocalError: local variable 'p' referenced before assignment",
+            "local_exec_report": "UnboundLocalError: cannot access local variable 'p' where it is not associated with a value",
+            "output_preview": "<model>\nWe are tasked with formulating a mathematical optimization model to minimize total procurement and manufacturing costs for GeoPower Solutions Inc., while satisfying:\n\n- Man"
+          },
+          {
+            "row_index": 329,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a problem where SkyLift Drone Services aims to **maximize total revenue** over three quarters (Q1, Q2, Q3) by setting **optimal prices** for three drone servic"
+          },
+          {
+            "row_index": 584,
+            "logged_code_exec_res": "ImportError: cannot import name 'exp' from 'gurobipy' (/home/chenyitian/anaconda3/envs/ttrl/lib/python3.10/site-packages/gurobipy/__init__.py)",
+            "local_exec_report": "ImportError: cannot import name 'exp' from 'gurobipy' (/Users/zhurui/anaconda3/lib/python3.11/site-packages/gurobipy/__init__.py)",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **price-based revenue maximization problem** over three quarters, where SkyLift Drone Services offers three types of drone serv"
+          }
+        ],
+        "solved_objective_mismatch_examples": []
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 749,
+        "success_without_obj": 1,
+        "failed_execution": 274
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/17.jsonl",
+      "step_from_filename": "17",
+      "step_values_in_rows": [
+        17
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 27,
+        "minor": 4,
+        "others": 1
+      },
+      "local_prompt_buckets": {
+        "maj": 27,
+        "minor": 3,
+        "others": 2
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 3,
+        "solved_objective_mismatch_count": 26,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 292,
+            "logged_code_exec_res": "ImportError: cannot import name 'Quicksum' from 'gurobipy' (/home/chenyitian/anaconda3/envs/ttrl/lib/python3.10/site-packages/gurobipy/__init__.py)",
+            "local_exec_report": "ImportError: cannot import name 'Quicksum' from 'gurobipy' (/Users/zhurui/anaconda3/lib/python3.11/site-packages/gurobipy/__init__.py)",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a linear optimization problem to maximize the total projected customer leads generated from digital advertising channels, subject"
+          },
+          {
+            "row_index": 600,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a network capacity planning problem involving two equipment types (Type 1 and Type 2), with objectives and constraints related to cost, environmental impact, a"
+          },
+          {
+            "row_index": 941,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a **transportation problem** where the goal is to **minimize the total cost of assigning aircraft from four operational bases to three maintenance facilities**"
+          }
+        ],
+        "solved_objective_mismatch_examples": [
+          {
+            "row_index": 98,
+            "logged_solved_objective": 0.07692534535755474,
+            "local_obj_result": 0.07692471757001103,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are tasked with optimizing the allocation of a $50,000,000 endowment across three asset classes—Healthcare Equity (A), U.S. Treasury Bonds (B), and Real Estate (C)—to **"
+          },
+          {
+            "row_index": 99,
+            "logged_solved_objective": 0.07692534936622442,
+            "local_obj_result": 0.07692528403271082,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **portfolio optimization problem** that maximizes expected return subject to constraints on **risk (standard deviation)** and *"
+          },
+          {
+            "row_index": 100,
+            "logged_solved_objective": 0.07692534535755474,
+            "local_obj_result": 0.07692471757001103,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are solving a **portfolio optimization problem** under constraints related to **return maximization**, **risk (standard deviation)**, and **allocation limits**.\n\n---\n\n##"
+          },
+          {
+            "row_index": 101,
+            "logged_solved_objective": 0.07692534936622442,
+            "local_obj_result": 0.07692528403271082,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\n### Mathematical Model for Beacon Hill Medical Center Endowment Portfolio Optimization\n\n#### **1. Sets**\n- $ i \\in \\{A, B, C\\} $: Index for asset classes.\n\n#### **2. Parame"
+          },
+          {
+            "row_index": 102,
+            "logged_solved_objective": 0.07692534535755474,
+            "local_obj_result": 0.07692471757001103,
+            "logged_code_exec_res": "Done",
+            "local_exec_report": "Done",
+            "output_preview": "<model>\nWe are tasked with solving a **portfolio optimization problem** under constraints involving **expected return maximization**, **risk (standard deviation) limitation**, and "
+          }
+        ]
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 804,
+        "success_without_obj": 0,
+        "failed_execution": 220
+      }
+    },
+    {
+      "file": "/Users/zhurui/Desktop/Chen_code/ttrl_opt/sampled_traj/18.jsonl",
+      "step_from_filename": "18",
+      "step_values_in_rows": [
+        18
+      ],
+      "row_count": 1024,
+      "prompt_count": 32,
+      "expected_keys": [
+        "input",
+        "output",
+        "score",
+        "step",
+        "solution",
+        "code_exec_res",
+        "ground_truth",
+        "majority_gt",
+        "original_gt",
+        "solved_objective"
+      ],
+      "logged_prompt_buckets": {
+        "maj": 27,
+        "minor": 2,
+        "others": 3
+      },
+      "local_prompt_buckets": {
+        "maj": 27,
+        "minor": 2,
+        "others": 3
+      },
+      "json_issues": {
+        "invalid_json_line_count": 0,
+        "missing_key_row_count": 0,
+        "invalid_json_examples": [],
+        "missing_key_examples": []
+      },
+      "remote_local_mismatch": {
+        "code_exec_res_mismatch_count": 4,
+        "solved_objective_mismatch_count": 0,
+        "code_exec_res_mismatch_examples": [
+          {
+            "row_index": 205,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'tuple'",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **network design and facility location problem** with **capacity constraints and assignment of demands** to facilities.\n\n---\n\n#"
+          },
+          {
+            "row_index": 212,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'str'",
+            "output_preview": "<model>\nWe are tasked with formulating and solving a **facility location and assignment problem** to optimize the placement of diagnostic hubs and the allocation of patient visits "
+          },
+          {
+            "row_index": 766,
+            "logged_code_exec_res": "SyntaxError: invalid syntax. Perhaps you forgot a comma?",
+            "local_exec_report": "SyntaxError: invalid syntax",
+            "output_preview": "<model>\nWe are given a multi-resource, multi-location defense allocation problem with the goal of maximizing the total defense capability score, subject to resource availability, b"
+          },
+          {
+            "row_index": 988,
+            "logged_code_exec_res": "TypeError: string indices must be integers",
+            "local_exec_report": "TypeError: string indices must be integers, not 'str'",
+            "output_preview": "<model>\nWe are tasked with formulating a mathematical optimization problem to minimize the total cost of establishing and operating diagnostic hubs while satisfying community deman"
+          }
+        ],
+        "solved_objective_mismatch_examples": []
+      },
+      "local_exec_summary": {
+        "executor_mode": "shared_executor",
+        "executor_import_error": null,
+        "python_cmd": null,
+        "python_candidates": null,
+        "num_rows": 1024,
+        "num_rows_with_code": 1024,
+        "num_unique_codes": 1024,
+        "executed_unique_codes": 1024,
+        "missing_code": 0,
+        "success_with_obj": 883,
+        "success_without_obj": 2,
+        "failed_execution": 139
+      }
+    }
+  ]
+}

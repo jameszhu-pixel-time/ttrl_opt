@@ -1,0 +1,438 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rollout Case Studies</title>
+  <style>
+    :root {
+      --bg: #f5f1e8;
+      --panel: #fffdf8;
+      --line: #e8dece;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --shadow: 0 10px 30px rgba(81, 62, 35, 0.08);
+      --maxw: 1400px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(173, 139, 81, 0.12), transparent 28%),
+        linear-gradient(180deg, #f6f0e3 0%, #f4efe7 48%, #f8f5ef 100%);
+      font-family: Georgia, "Iowan Old Style", "Palatino Linotype", "Times New Roman", serif;
+    }
+    a { color: inherit; }
+    code {
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+      background: #f3eee3;
+      padding: 0.08rem 0.35rem;
+      border-radius: 6px;
+      font-size: 0.92em;
+    }
+    .page {
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 28px 24px 80px;
+    }
+    .hero {
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.78), rgba(255,248,235,0.92)),
+        linear-gradient(135deg, #214e57, #8d5a2b);
+      border: 1px solid rgba(141, 90, 43, 0.15);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 30px 30px 26px;
+      margin-bottom: 22px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      inset: auto -80px -80px auto;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(141, 90, 43, 0.16), transparent 65%);
+      border-radius: 999px;
+    }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #8d5a2b;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(34px, 5vw, 58px);
+      line-height: 0.96;
+      letter-spacing: -0.03em;
+      max-width: 780px;
+    }
+    .hero p {
+      max-width: 760px;
+      margin: 16px 0 0;
+      font-size: 17px;
+      line-height: 1.7;
+      color: #374151;
+    }
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 14px;
+      margin: 20px 0 26px;
+    }
+    .metric-card {
+      background: rgba(255,255,255,0.82);
+      backdrop-filter: blur(4px);
+      border: 1px solid rgba(232, 222, 206, 0.95);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+      box-shadow: 0 4px 16px rgba(73, 51, 24, 0.05);
+    }
+    .metric-label {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #8b7355;
+      margin-bottom: 10px;
+    }
+    .metric-value {
+      font-size: 34px;
+      line-height: 1;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .metric-sub {
+      font-size: 14px;
+      line-height: 1.55;
+      color: var(--muted);
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: 280px minmax(0, 1fr);
+      gap: 22px;
+      align-items: start;
+    }
+    .sidebar {
+      position: sticky;
+      top: 20px;
+      background: rgba(255, 252, 245, 0.86);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 16px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+    .sidebar h2 {
+      margin: 4px 0 14px;
+      font-size: 20px;
+    }
+    .nav-item {
+      display: block;
+      text-decoration: none;
+      border: 1px solid transparent;
+      border-radius: 16px;
+      padding: 12px 12px 11px;
+      transition: transform 140ms ease, border-color 140ms ease, background 140ms ease;
+      margin-bottom: 8px;
+      background: #fff;
+    }
+    .nav-item:hover {
+      transform: translateY(-1px);
+      border-color: #d7c3aa;
+      background: #fff9ef;
+    }
+    .nav-kicker {
+      display: block;
+      font-size: 11px;
+      color: #8d5a2b;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      font-weight: 700;
+    }
+    .nav-title {
+      display: block;
+      font-size: 14px;
+      line-height: 1.4;
+      font-weight: 600;
+    }
+    .content {
+      display: grid;
+      gap: 22px;
+    }
+    .case-card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      padding: 26px;
+      position: relative;
+      overflow: hidden;
+    }
+    .case-card::before {
+      content: "";
+      position: absolute;
+      inset: 0 auto 0 0;
+      width: 8px;
+      background: var(--case-color);
+    }
+    .case-header {
+      display: grid;
+      grid-template-columns: auto 1fr auto;
+      gap: 12px;
+      align-items: center;
+      margin-bottom: 18px;
+    }
+    .case-badge {
+      display: inline-flex;
+      align-items: center;
+      background: var(--case-accent);
+      color: var(--case-color);
+      border: 1px solid color-mix(in srgb, var(--case-color) 20%, white);
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+    .case-header h2 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+    }
+    .source-link {
+      text-decoration: none;
+      font-size: 13px;
+      color: var(--muted);
+      border-bottom: 1px solid currentColor;
+      width: fit-content;
+    }
+    .case-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 400px) minmax(0, 1fr);
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .info-card, .chart-card {
+      border-radius: 20px;
+      border: 1px solid var(--line);
+      background: #fff;
+      overflow: hidden;
+    }
+    .info-card {
+      padding: 14px 16px;
+      display: grid;
+      gap: 10px;
+      align-content: start;
+    }
+    .info-row {
+      display: grid;
+      grid-template-columns: 132px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #f1eadc;
+    }
+    .info-row:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .info-key {
+      font-size: 12px;
+      color: #8b7355;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 700;
+    }
+    .info-value {
+      font-size: 14px;
+      line-height: 1.55;
+    }
+    .chart-card {
+      padding: 14px;
+      background:
+        linear-gradient(180deg, #fffdf8 0%, #fff7ea 100%);
+    }
+    .chart-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      border: 1px solid #efe5d5;
+      background: white;
+    }
+    .detail-section {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px dashed #dccfb8;
+    }
+    .detail-section h3 {
+      margin: 0 0 12px;
+      font-size: 22px;
+      letter-spacing: -0.02em;
+    }
+    .detail-section p,
+    .detail-section li {
+      font-size: 16px;
+      line-height: 1.72;
+      color: #2f3744;
+    }
+    .detail-section ul {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+    .detail-section ol {
+      margin: 10px 0 0;
+      padding-left: 24px;
+    }
+    .code-block {
+      margin: 14px 0;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #e2d7c3;
+      background: #1e2430;
+      color: #edf2f7;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+    }
+    .code-lang {
+      padding: 8px 12px;
+      font-size: 12px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #d7e1ef;
+      background: rgba(255,255,255,0.06);
+      border-bottom: 1px solid rgba(255,255,255,0.07);
+      font-family: "SFMono-Regular", Menlo, Consolas, monospace;
+    }
+    .code-block code {
+      display: block;
+      padding: 14px 16px 16px;
+      overflow-x: auto;
+      white-space: pre;
+      background: transparent;
+      color: inherit;
+      border-radius: 0;
+      font-size: 13px;
+      line-height: 1.6;
+    }
+    .footer {
+      margin-top: 28px;
+      padding: 18px 6px 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    @media (max-width: 1120px) {
+      .layout {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: static;
+      }
+    }
+    @media (max-width: 780px) {
+      .page {
+        padding: 18px 14px 56px;
+      }
+      .hero {
+        padding: 22px 18px;
+        border-radius: 22px;
+      }
+      .metrics {
+        grid-template-columns: 1fr;
+      }
+      .case-card {
+        padding: 18px;
+        border-radius: 22px;
+      }
+      .case-header {
+        grid-template-columns: 1fr;
+      }
+      .case-grid {
+        grid-template-columns: 1fr;
+      }
+      .info-row {
+        grid-template-columns: 1fr;
+        gap: 6px;
+      }
+      .detail-section p,
+      .detail-section li {
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <section class="hero">
+      <div class="eyebrow">Rollout Error Atlas</div>
+      <h1>Rollout Case Studies</h1>
+      <p>这个页面把 <code>ttrl_opt/rollout_generations_case_studies</code> 里的 4 个代表性案例整理成一个单页汇总。阅读顺序从“多数票能纠错”到“多数票被带偏”，再到“正确答案根本没被采样到”与“同题出现 min/max 漂移”，便于横向比较错误模式。</p>
+    </section>
+
+    <section class="metrics"><div class='metric-card'><div class='metric-label'>Case Studies</div><div class='metric-value'>4</div><div class='metric-sub'>精选 4 个代表性 rollout group</div></div><div class='metric-card'><div class='metric-label'>Majority Correct</div><div class='metric-value'>1</div><div class='metric-sub'>多数票能自我纠错，但单条 rollout 仍会犯错</div></div><div class='metric-card'><div class='metric-label'>Majority Wrong</div><div class='metric-value'>1</div><div class='metric-sub'>正确答案存在，但主导模板稳定出错</div></div><div class='metric-card'><div class='metric-label'>Not-even Sampled</div><div class='metric-value'>1</div><div class='metric-sub'>正确解在整组 sample 中完全没有出现</div></div><div class='metric-card'><div class='metric-label'>Min/Max Inconsistent</div><div class='metric-value'>1</div><div class='metric-sub'>同一 prompt 内同时出现 maximize / minimize 两种建模方向</div></div></section>
+
+    <div class="layout">
+      <aside class="sidebar">
+        <h2>目录</h2>
+        <a class='nav-item' href='#01_majority_vote_correct'><span class='nav-kicker'>Majority Correct</span><span class='nav-title'>Majority Vote Correct: total 被误写成 average</span></a><a class='nav-item' href='#02_majority_vote_wrong'><span class='nav-kicker'>Majority Wrong</span><span class='nav-title'>Majority Vote Wrong: 固定成本被整体漏掉</span></a><a class='nav-item' href='#03_not_even_sampled'><span class='nav-kicker'>Not-even Sampled</span><span class='nav-title'>Not-even Sampled: servings 被建成连续变量</span></a><a class='nav-item' href='#04_min_max_inconsistent_prompt'><span class='nav-kicker'>Min/Max Inconsistent</span><span class='nav-title'>Min/Max Inconsistent Prompt: 同题分裂成 340 / 360 / 410 三类回复</span></a>
+      </aside>
+
+      <main class="content">
+        <article class='case-card' id='01_majority_vote_correct' style='--case-color:#2a7f62; --case-accent:#dff3ea;'><div class='case-header'><div class='case-badge'>Majority Correct</div><h2>Majority Vote Correct: total 被误写成 average</h2><a class='source-link' href='01_majority_vote_correct/analysis.md'>查看原始 analysis.md</a></div><div class='case-grid'><div class='info-card'><div class='info-row'><div class='info-key'>来源文件</div><div class='info-value'>7.jsonl</div></div><div class='info-row'><div class='info-key'>prompt_index</div><div class='info-value'>21</div></div><div class='info-row'><div class='info-key'>分类</div><div class='info-value'>majority vote correct</div></div><div class='info-row'><div class='info-key'>ground truth</div><div class='info-value'>3.595</div></div><div class='info-row'><div class='info-key'>majority answer</div><div class='info-value'>3.595</div></div><div class='info-row'><div class='info-key'>sampled answer 分布</div><div class='info-value'>{&#x27;3.595&#x27;: 31, &#x27;0.719&#x27;: 1}</div></div><div class='info-row'><div class='info-key'>错误 rollout</div><div class='info-value'>local_idx=10<code>, </code>solved_objective=0.7190000000000001</div></div></div><div class='chart-card'><img src='01_majority_vote_correct/answer_distribution.png' alt='answer distribution for Majority Vote Correct: total 被误写成 average'></div></div><section class='detail-section'><h3>错误答案成因</h3><p>这组样本多数票是对的，但错误 rollout 把题目要求的 <strong>total aggregate predictive strength</strong> 改写成了 <strong>average predictive strength</strong>。</p><p>原题明确要求的是 total aggregate predictive strength；而错误 rollout 在代码里把 4 个因子的总和全部又除以 <code>5</code>，于是目标值整体缩小为原来的 <code>1/5</code>：</p><ul><li>正确值: <code>3.595</code></li><li>错误值: <code>0.719</code></li><li>关系: <code>0.719 = 3.595 / 5</code></li></ul></section><section class='detail-section'><h3>原始文本片段（标出错误点）</h3><pre class='code-block'><div class='code-lang'>python</div><code># Define average impact scores (sum over 5 applicants)
+S_IS = 0.85 + 0.60 + 0.90 + 0.75 + 0.50
+S_BA = 0.70 + 0.80 + 0.50 + 0.95 + 0.60
+S_DER = 0.40 + 0.55 + 0.65 + 0.30 + 0.70
+S_PHS = 0.90 + 0.75 + 0.60 + 0.80 + 0.55
+
+S_IS /= 5
+S_BA /= 5
+S_DER /= 5
+S_PHS /= 5
+
+# Objective: maximize weighted average predictive strength
+model.setObjective(w_IS * S_IS + w_BA * S_BA + w_DER * S_DER + w_PHS * S_PHS, GRB.MAXIMIZE)</code></pre><p>标注:</p><ul><li><code>[错误点]</code> <code>S_IS /= 5</code>、<code>S_BA /= 5</code>、<code>S_DER /= 5</code>、<code>S_PHS /= 5</code></li><li><code>[错误点]</code> 目标函数随后最大化的是 <code>weighted average predictive strength</code>，不再是题目要求的 total。</li></ul></section><section class='detail-section'><h3>结论</h3><p>这个错误不会改变最优权重结构，但会把最终 objective 数值整体缩小 5 倍，所以单条 rollout 答错；其余 31 条 rollout 保持 total 定义，因此 majority vote 仍然正确。</p></section></article><article class='case-card' id='02_majority_vote_wrong' style='--case-color:#b4561b; --case-accent:#fff0e3;'><div class='case-header'><div class='case-badge'>Majority Wrong</div><h2>Majority Vote Wrong: 固定成本被整体漏掉</h2><a class='source-link' href='02_majority_vote_wrong/analysis.md'>查看原始 analysis.md</a></div><div class='case-grid'><div class='info-card'><div class='info-row'><div class='info-key'>来源文件</div><div class='info-value'>12.jsonl</div></div><div class='info-row'><div class='info-key'>prompt_index</div><div class='info-value'>4</div></div><div class='info-row'><div class='info-key'>分类</div><div class='info-value'>majority vote wrong</div></div><div class='info-row'><div class='info-key'>ground truth / 正确答案</div><div class='info-value'>13835</div></div><div class='info-row'><div class='info-key'>majority answer</div><div class='info-value'>13905</div></div><div class='info-row'><div class='info-key'>sampled answer 分布</div><div class='info-value'>{&#x27;13905&#x27;: 30, &quot;None | gurobipy._exception.GurobiError: Unknown parameter &#x27;OptimizeLevel&#x27;&quot;: 1, &#x27;13835&#x27;: 1}</div></div><div class='info-row'><div class='info-key'>majority 错误 rollout</div><div class='info-value'>local_idx=0<code>, </code>solved_objective=13905.0</div></div><div class='info-row'><div class='info-key'>minority 正确 rollout</div><div class='info-value'>local_idx=23<code>, </code>solved_objective=13835.0</div></div></div><div class='chart-card'><img src='02_majority_vote_wrong/answer_distribution.png' alt='answer distribution for Majority Vote Wrong: 固定成本被整体漏掉'></div></div><section class='detail-section'><h3>majority 错误答案成因</h3><p>这组 rollout 的主错误非常集中: <strong>把固定 operating cost <code>30 + 40 = 70</code> 从真正求解的 objective 里删掉了。</strong></p><p>题目给出的目标是:</p><p><code>(50 * Q1 - 30 - 1 * L1 - 1 * E1) + (60 * Q2 - 40 - 1 * L2 - 1 * E2) - 2 * S</code></p><p>但 majority rollout 真正送进 Gurobi 的 objective 变成了:</p><p><code>50*Q1 + 60*Q2 - L1 - L2 - E1 - E2 - 2*S</code></p><p>因此 objective 被系统性高估 <code>70</code>:</p><ul><li>majority 错误答案: <code>13905</code></li><li>正确答案: <code>13835</code></li><li>差值: <code>70</code></li></ul></section><section class='detail-section'><h3>原始文本片段（majority wrong，标出错误点）</h3><pre class='code-block'><div class='code-lang'>python</div><code># Objective function: maximize net economic benefit
+# Z = 50Q1 + 60Q2 - L1 - L2 - E1 - E2 - 2*S
+model.setObjective(50*Q1 + 60*Q2 - L1 - L2 - E1 - E2 - 2*S, GRB.MAXIMIZE)
+
+print(f&quot;Total Net Economic Benefit: {{model.objVal:.2f}}&quot;)</code></pre><p>标注:</p><ul><li><code>[错误点]</code> <code>model.setObjective(...)</code> 里 <strong>缺少 <code>-70</code></strong>，也就是漏掉了两段管道的固定成本 <code>-30</code> 和 <code>-40</code>。</li><li><code>[错误点]</code> 后续 <code>model.objVal</code> 直接被当成最终答案输出，于是整组大多数样本都稳定落在 <code>13905</code>。</li></ul></section><section class='detail-section'><h3>minority correct 的原始文本</h3><pre class='code-block'><div class='code-lang'>python</div><code># Set objective: maximize total net benefit
+model.setObjective(
+    50*Q1 + 60*Q2 - L1 - L2 - E1 - E2 - 2*S - 70,
+    GRB.MAXIMIZE
+)</code></pre><p>这个 minority correct rollout 明确把固定成本并入 objective，所以得到的结果是 <code>13835</code>，与 ground truth 一致。</p></section><section class='detail-section'><h3>结论</h3><p>这是一个典型的 <strong>stable-but-wrong majority</strong>:</p><ul><li>多数样本共享同一个错误建模模板</li><li>少数样本把固定成本保留下来，答案正确</li><li>因为错误模板占了 <code>30/32</code>，所以 majority vote 被带偏</li></ul></section></article><article class='case-card' id='03_not_even_sampled' style='--case-color:#8f2d56; --case-accent:#fde8f0;'><div class='case-header'><div class='case-badge'>Not-even Sampled</div><h2>Not-even Sampled: servings 被建成连续变量</h2><a class='source-link' href='03_not_even_sampled/analysis.md'>查看原始 analysis.md</a></div><div class='case-grid'><div class='info-card'><div class='info-row'><div class='info-key'>来源文件</div><div class='info-value'>82.jsonl</div></div><div class='info-row'><div class='info-key'>prompt_index</div><div class='info-value'>11</div></div><div class='info-row'><div class='info-key'>分类</div><div class='info-value'>not-even sampled</div></div><div class='info-row'><div class='info-key'>ground truth / 正确答案</div><div class='info-value'>7.5</div></div><div class='info-row'><div class='info-key'>majority answer</div><div class='info-value'>6.16071428571</div></div><div class='info-row'><div class='info-key'>sampled answer 分布</div><div class='info-value'>{&#x27;6.16071428571&#x27;: 32}</div></div></div><div class='chart-card'><img src='03_not_even_sampled/answer_distribution.png' alt='answer distribution for Not-even Sampled: servings 被建成连续变量'></div></div><section class='detail-section'><h3>majority 错误答案成因</h3><p>这组样本的系统性错误是: <strong>把“servings”建成了连续变量，而不是整数变量。</strong></p><p>从原始代码看，4 个决策变量都只是普通连续变量，没有 <code>vtype=GRB.INTEGER</code> 或 <code>GRB.INT</code>。这会允许出现分数份数，例如 <code>0.892857</code> 份米饭、<code>1.964286</code> 份汤，从而把最小成本压到 <code>6.16071428571</code>。</p></section><section class='detail-section'><h3>原始文本片段（标出错误点）</h3><pre class='code-block'><div class='code-lang'>python</div><code># Define decision variables
+x1 = model.addVar(name=&quot;Chicken_Breast&quot;, lb=0, ub=10)
+x2 = model.addVar(name=&quot;Brown_Rice&quot;, lb=0, ub=15)
+x3 = model.addVar(name=&quot;Avocado&quot;, lb=0, ub=5)
+x4 = model.addVar(name=&quot;Lentil_Soup&quot;, lb=0, ub=12)</code></pre><p>标注:</p><ul><li><code>[错误点]</code> <code>addVar(...)</code> 默认是连续变量</li><li><code>[错误点]</code> 题目语义是 daily meals / servings，这份数据里的 ground truth 对应 <strong>整数份数</strong>；continuous relaxation 得到的是更低但不被接受的答案</li></ul></section><section class='detail-section'><h3>正确答案与复核</h3><p>我用同一组约束分别复算了连续版和整数版:</p><ul><li>continuous model: objective = <code>6.160714285714285</code>, solution = <code>[0.0, 0.8928571428571427, 0.35714285714285715, 1.9642857142857142]</code></li><li>integer model: objective = <code>7.5</code>, solution = <code>[1.0, 3.0, 0.0, 0.0]</code></li></ul><p>因此:</p><ul><li>sampled 的统一错误答案: <code>6.16071428571</code></li><li>正确答案: <code>7.5</code></li></ul></section><section class='detail-section'><h3>结论</h3><p>这是一个 <strong>not-even sampled</strong> 的典型例子:</p><ul><li>所有 rollout 都共享同一种建模假设错误</li><li>因而整个样本组里根本没有出现正确答案</li><li>majority vote 也就没有纠错空间</li></ul></section></article><article class='case-card' id='04_min_max_inconsistent_prompt' style='--case-color:#2d5f8f; --case-accent:#e5f0fb;'><div class='case-header'><div class='case-badge'>Min/Max Inconsistent</div><h2>Min/Max Inconsistent Prompt: 同题分裂成 340 / 360 / 410 三类回复</h2><a class='source-link' href='04_min_max_inconsistent_prompt/analysis.md'>查看原始 analysis.md</a></div><div class='case-grid'><div class='info-card'><div class='info-row'><div class='info-key'>来源文件</div><div class='info-value'>14.jsonl</div></div><div class='info-row'><div class='info-key'>prompt_index</div><div class='info-value'>28</div></div><div class='info-row'><div class='info-key'>分类</div><div class='info-value'>min/max inconsistent prompt</div></div><div class='info-row'><div class='info-key'>ground truth / 正确答案</div><div class='info-value'>340</div></div><div class='info-row'><div class='info-key'>majority answer</div><div class='info-value'>410</div></div><div class='info-row'><div class='info-key'>sampled answer 分布</div><div class='info-value'>{&#x27;410&#x27;: 9, &#x27;360&#x27;: 7, &#x27;340&#x27;: 7, &#x27;290&#x27;: 2, &#x27;None / exec error&#x27;: 4, &#x27;320&#x27;: 1, &#x27;-290&#x27;: 1, &#x27;-360&#x27;: 1}</div></div><div class='info-row'><div class='info-key'>majority 错误 rollout</div><div class='info-value'>local_idx=3<code>, </code>solved_objective=410.0</div></div><div class='info-row'><div class='info-key'>方向统计</div><div class='info-value'>{&#x27;GRB.MAXIMIZE&#x27;: 20, &#x27;GRB.MINIMIZE&#x27;: 12}</div></div><div class='info-row'><div class='info-key'>min-direction 代表 rollout</div><div class='info-value'>local_idx=0<code>, </code>solved_objective=360.0</div></div><div class='info-row'><div class='info-key'>correct 代表 rollout</div><div class='info-value'>local_idx=25<code>, </code>solved_objective=340.0</div></div></div><div class='chart-card'><img src='04_min_max_inconsistent_prompt/answer_distribution.png' alt='answer distribution for Min/Max Inconsistent Prompt: 同题分裂成 340 / 360 / 410 三类回复'></div></div><section class='detail-section'><h3>错误答案成因</h3><p>这是一个很典型的 <strong>prompt 级 min/max 漂移</strong>:</p><ul><li>一部分 rollout 保留了题面 objective 的写法 <code>700 - cost</code>，直接做 <code>GRB.MAXIMIZE</code></li><li>一部分 rollout 把它改写成“等价的最小化 cost”，转成 <code>GRB.MINIMIZE</code></li><li>但真正的错误不只在方向上，还在于 <strong>不同分支后续输出的量已经不是同一个量</strong></li></ul><p>这组样本里至少稳定出现了三类回复:</p><ol><li><code>max + 原题 4 变量模型</code>，输出正确答案 <code>340</code></li><li><code>min + 原题 4 变量模型</code>，求出来的是最小成本 <code>360</code>，但没有再换回题目要的 <code>700 - cost</code>，所以错把 <code>360</code> 当最终答案</li><li><code>max + 重建成 8 变量 f_ijt 模型</code>，把原题的 4 个变量改成按 stage 展开的 8 个变量，并把成本系数改写为逐期价格，最后得到 majority 错误答案 <code>410</code></li></ol><p>因此，这不是单一 bug，而是 <strong>同一 prompt 被不同 rollout 重解释之后，分裂成多个彼此不兼容的求解模板</strong>。</p></section><section class='detail-section'><h3>三类回复概览</h3><ul><li><code>A. 正确保留原题</code>: <code>GRB.MAXIMIZE</code>，目标仍是 <code>700 - (3f00 + 7f01 + 11f10 + 15f11)</code>，答案 <code>340</code></li><li><code>B. 改写成最小成本后直接报 cost</code>: <code>GRB.MINIMIZE</code>，模型本身接近等价，但最后输出的是 <code>360</code> 而不是 <code>340</code></li><li><code>C. 重新发明变量和成本结构</code>: <code>GRB.MAXIMIZE</code>，把 4 变量改成 8 变量 <code>f_ijt</code>，majority 稳定落在 <code>410</code></li></ul><p>这三类已经覆盖了这个 prompt 里最主要的回答形态；其余 <code>290 / 320 / -290 / -360 / exec error</code> 只是更边缘的派生错误。</p></section><section class='detail-section'><h3>原始文本片段（标出错误点）</h3><p>代表类 A: <code>max + correct (340)</code></p><pre class='code-block'><div class='code-lang'>python</div><code># Objective function: Maximize (Total Yield - Total Cost)
+# Total yield = 700
+# Total cost = 3*f00 + 7*f01 + 11*f10 + 15*f11
+model.setObjective(700 - (3*f00 + 7*f01 + 11*f10 + 15*f11), GRB.MAXIMIZE)</code></pre><p>标注:</p><ul><li><code>[正确]</code> 保留了题面给出的 <code>700 - cost</code> 形式</li><li><code>[正确]</code> 仍然使用原题的 4 个变量 <code>f00, f01, f10, f11</code></li></ul><p>代表类 B: <code>min + wrong (360)</code></p><pre class='code-block'><div class='code-lang'>python</div><code># Objective: minimize total cost
+model.setObjective(3*f00 + 7*f01 + 11*f10 + 15*f11, GRB.MINIMIZE)
+
+print(f&quot;\nTotal Fertilizer Cost = {total_cost:.2f}&quot;)
+print(f&quot;Total Crop Yield = {total_yield}&quot;)
+print(f&quot;Objective Value = {total_yield - total_cost:.2f}&quot;)</code></pre><p>标注:</p><ul><li><code>[分歧点]</code> 这里把题面 objective 改写成了 <code>GRB.MINIMIZE</code></li><li><code>[错误点]</code> 实际被 <code>solved_objective</code> 记录下来的量是 <strong>最小成本 <code>360</code></strong>，不是题目要求的净收益 <code>340</code></li><li><code>[结果]</code> 所以这一路 rollout 虽然常常能算出同一组可行解，但上报答案时口径错了</li></ul><p>代表类 C: <code>max + majority wrong (410)</code></p><pre class='code-block'><div class='code-lang'>python</div><code># Decision variables: f[i][j][t] for i=0,1; j=0,1; t=0,1
+f[0, 0, 0] = model.addVar(vtype=GRB.CONTINUOUS, name=&quot;f_000&quot;, lb=0)
+f[0, 0, 1] = model.addVar(vtype=GRB.CONTINUOUS, name=&quot;f_001&quot;, lb=0)
+...
+
+cost = f[0,0,0] + 2*f[0,0,1] + 3*f[0,1,0] + 4*f[0,1,1] + 5*f[1,0,0] + 6*f[1,0,1] + 7*f[1,1,0] + 8*f[1,1,1]
+model.setObjective(700 - cost, GRB.MAXIMIZE)</code></pre><p>标注:</p><ul><li><code>[错误点]</code> 原题变量是 <code>f_ij</code>，这里只有 4 个；这一支把它重建成了 8 个 <code>f_ijt</code></li><li><code>[错误点]</code> 原题成本已经按题目写成 <code>3, 7, 11, 15</code> 四个聚合系数；这里又改写成逐 stage 的 <code>1..8</code></li><li><code>[结果]</code> 这相当于求解了一个 <strong>不同的问题</strong>，于是 majority 稳定输出 <code>410</code></li></ul></section><section class='detail-section'><h3>正确答案与复核</h3><p>正确 rollout 保留的是原题 4 变量模型:</p><ul><li>objective: <code>max 700 - (3f00 + 7f01 + 11f10 + 15f11)</code></li><li>正确最优值: <code>340</code></li></ul><p>把它等价改写成最小化 cost 也不是不可以，但必须满足两件事:</p><ul><li>约束不能被重写成另一个问题</li><li>最终回报给题目的答案必须再换回 <code>700 - cost</code></li></ul><p>这个 prompt 的 min 分支没有稳定做到第二点，而 majority 的 max 分支里又有相当一部分直接改成了 8 变量新模型，所以最后主答案被拉到了 <code>410</code>。</p></section><section class='detail-section'><h3>结论</h3><p>这是一个比普通 <code>majority wrong</code> 更细的例子:</p><ul><li>同一道题内部先发生了 <code>maximize / minimize</code> 的建模分叉</li><li>分叉后又进一步衍生出“正确 max 模板”“报错口径的 min 模板”“重建变量的 max 模板”三类主回复</li><li>结果不是简单地围绕一个错误答案波动，而是分裂成 <code>340 / 360 / 410</code> 三个主峰</li></ul></section></article>
+      </main>
+    </div>
+
+    <div class="footer">
+      页面由 <code>build_summary_html.py</code> 从各子目录的 <code>analysis.md</code> 和 <code>answer_distribution.png</code> 生成。
+    </div>
+  </div>
+</body>
+</html>

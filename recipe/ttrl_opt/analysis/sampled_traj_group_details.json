@@ -1,0 +1,823 @@
+[
+  {
+    "step": "1",
+    "prompt_index": 22,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 4,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "1",
+      "prompt_index": 22,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 437,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "Let's solve this mathematical modeling problem **step by step**, following a structured approach to build an accurate and solvable optimization model.\n\n---\n\n### 🔍 Step 1: Understand the Problem\n\nWe are to:\n- Allocate **50 student staff members** across **5 academic initiatives**.\n- Each initiative h"
+        }
+      ]
+    }
+  },
+  {
+    "step": "2",
+    "prompt_index": 17,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 2,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "2",
+      "prompt_index": 17,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 654,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "Certainly! Let's solve this **Agricultural Pesticide Optimization Problem** step by step, following a structured approach to build a clear mathematical model and then implement it in **Gurobi Python**.\n\n---\n\n## 🔍 Step 1: Problem Understanding\n\nWe are optimizing pesticide application on two farmlands"
+        }
+      ]
+    }
+  },
+  {
+    "step": "2",
+    "prompt_index": 19,
+    "group_size": 64,
+    "abnormal": true,
+    "reasons": "group_size_64|missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 3,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "group_size_anomaly|missing_code_rows",
+    "detail": {
+      "step": "2",
+      "prompt_index": 19,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 475,
+          "has_python_tag": true,
+          "has_python_fence": false,
+          "output_preview": "<model>\nWe are tasked with creating a mathematical model to **minimize the total operational cost** of delivering medical packages from three drone hubs to three healthcare facilities, while satisfying supply limits and demand requirements.\n\n---\n\n### **Step 1: Define the Sets**\n\n- Let $ H = \\{1, 2, "
+        }
+      ]
+    }
+  },
+  {
+    "step": "2",
+    "prompt_index": 21,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "others",
+    "local_bucket": "others",
+    "strict_code_mismatch_rows": 5,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "2",
+      "prompt_index": 21,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 421,
+          "has_python_tag": false,
+          "has_python_fence": false,
+          "output_preview": "<span class=\"cursor\"></span>\n\nuser\nSolve the following mathmetical modeling problem\nA Regional Public Health Authority is preparing for a potential severe infectious disease outbreak during the upcoming season. To effectively manage and mitigate the impact, the authority needs to strategically alloc"
+        }
+      ]
+    }
+  },
+  {
+    "step": "3",
+    "prompt_index": 2,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "others",
+    "local_bucket": "others",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "3",
+      "prompt_index": 2,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 275,
+          "has_python_tag": false,
+          "has_python_fence": false,
+          "output_preview": "<html><body><h1>Step-by-Step Solution to the Makespan Minimization Problem</h1>\n\n<p>Our goal is to find the optimal sequence of 6 component units (2 A's, 3 B's, 1 C) through a three-stage serial manufacturing process (Assembly → Protective Coating → Quality Assurance & Calibration) such that the ove"
+        }
+      ]
+    }
+  },
+  {
+    "step": "3",
+    "prompt_index": 8,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 2,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "3",
+      "prompt_index": 8,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 71,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "Let's solve this **mathematical optimization problem step by step**, formulating it as a **linear programming (LP) model**, and then provide the corresponding **Gurobi Python code** to solve it.\n\n---\n\n### 🔍 Step 1: Problem Understanding\n\nWe have:\n\n- **3 products**: A, B, C\n- Each has a **revenue per"
+        }
+      ]
+    }
+  },
+  {
+    "step": "3",
+    "prompt_index": 15,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 2,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "3",
+      "prompt_index": 15,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 377,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "Let's solve this step-by-step using mathematical modeling and optimization.\n\n---\n\n### 🔍 Step 1: Problem Understanding\n\nWe are allocating **$100 million** across **three investment projects**:\n\n| Project | Expected Return | Risk Level |\n|--------|------------------|------------|\n| PWR Upgrades | 6.0%"
+        }
+      ]
+    }
+  },
+  {
+    "step": "3",
+    "prompt_index": 31,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "3",
+      "prompt_index": 31,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 765,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "Absolutely! Let's solve this **inventory management optimization problem** step by step.\n\n---\n\n### ✅ Step 1: Problem Understanding\n\nWe are managing inventory of a specialized hydraulic pump assembly over **six months**.\n\n- **Objective:** Minimize total cost (acquisition + holding + shortage)\n- **Con"
+        }
+      ]
+    }
+  },
+  {
+    "step": "4",
+    "prompt_index": 4,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "4",
+      "prompt_index": 4,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 43,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "Let's solve this mathematical modeling problem step by step, following proper structure.\n\n---\n\n### 🔍 **Step 1: Problem Understanding**\n\nWe are to **minimize total cost** for GlobalCard Inc. to serve three sales regions (X, Y, Z) using potential hub locations (Alpha, Beta, Gamma). The total cost incl"
+        }
+      ]
+    }
+  },
+  {
+    "step": "4",
+    "prompt_index": 28,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "4",
+      "prompt_index": 28,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 990,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "# Step-by-Step Mathematical Modeling and Optimization for MELC Production Schedule\n\nWe are tasked with solving a **production scheduling optimization problem** for the Military Engineering Logistics Command (MELC), over a two-week operational cycle. The goal is to **minimize total production cost** "
+        }
+      ]
+    }
+  },
+  {
+    "step": "4",
+    "prompt_index": 0,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "bucket_changed|semantic_code_mismatch_rows_5|semantic_obj_mismatch_rows_2",
+    "logged_bucket": "minor",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 6,
+    "semantic_code_mismatch_rows": 5,
+    "semantic_obj_mismatch_rows": 2,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "review_needed",
+    "normalized_reasons": "bucket_changed|semantic_code_mismatch_rows|semantic_obj_mismatch_rows",
+    "detail": {
+      "step": "4",
+      "prompt_index": 0,
+      "type": "review_group",
+      "mismatches": [
+        {
+          "row_index": 512,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "AttributeError: Unable to retrieve attribute 'x'",
+          "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+          "logged_exec_kind": "eError",
+          "local_exec_kind": "iError",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are given a problem of **selecting 3 out of 10 potential observation sites** (L1 through L10) such that the **minimum distance between any two selected sites is maximized**.\n\nThis is a classic **maximin distance selection problem**, also known as the **p-center problem in geometric form**"
+        },
+        {
+          "row_index": 768,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "Done",
+          "local_exec_report": "TypeError: expected string or buffer",
+          "logged_exec_kind": "Done",
+          "local_exec_kind": "eError",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are given a problem of **selecting 3 out of 10 potential observation posts** such that the **minimum distance between any two selected posts is maximized**. This is a classic **max-min distance selection problem**, often referred to as the **\"Three-Point Max-Min Distance Problem\"** or **\""
+        },
+        {
+          "row_index": 770,
+          "code_mismatch": true,
+          "objective_mismatch": true,
+          "logged_code_exec_res": "Done",
+          "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+          "logged_exec_kind": "Done",
+          "local_exec_kind": "iError",
+          "logged_solved_objective": 5.0,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are given a problem of selecting **3 out of 10 locations** (L1 to L10) such that the **minimum distance between any two selected sites is maximized**.\n\nThis is a classic **max-min distance optimization** problem, often referred to as the **Discrete p-Optimal Separation Problem** or **Maxi"
+        },
+        {
+          "row_index": 771,
+          "code_mismatch": true,
+          "objective_mismatch": true,
+          "logged_code_exec_res": "Done",
+          "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+          "logged_exec_kind": "Done",
+          "local_exec_kind": "iError",
+          "logged_solved_objective": 7.0,
+          "local_obj_result": null,
+          "output_preview": "Let's solve this step by step.\n\n---\n\n### 🔍 **Problem Understanding**\n\nWe are given:\n\n- 10 potential observation post locations: L1 to L10.\n- We must **select exactly 3 sites**.\n- The **objective** is to **maximize the minimum distance** between any pair of the selected sites.\n- That is, among all po"
+        },
+        {
+          "row_index": 774,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "Done",
+          "local_exec_report": "TypeError: expected string or buffer",
+          "logged_exec_kind": "Done",
+          "local_exec_kind": "eError",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are given a problem of selecting **three out of ten locations** (L1 to L10) such that the **minimum distance between any two selected sites is maximized**.\n\nThis is a classic **maximin distance selection problem**, often referred to as the **\"Max-min Distance Selection\"** or **\"Optimal Sp"
+        }
+      ]
+    }
+  },
+  {
+    "step": "5",
+    "prompt_index": 12,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "others",
+    "local_bucket": "others",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "5",
+      "prompt_index": 12,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 860,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "Absolutely! Let's solve this **mathematical modeling problem** step by step, using logical reasoning and structured optimization modeling.\n\n---\n\n## 🔍 Step 1: Understand the Problem\n\nWe are to **assign farmhands to specific tasks in specific divisions and shifts** such that:\n\n1. All staffing requirem"
+        }
+      ]
+    }
+  },
+  {
+    "step": "5",
+    "prompt_index": 19,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 5,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "5",
+      "prompt_index": 19,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 414,
+          "has_python_tag": false,
+          "has_python_fence": true,
+          "output_preview": "Let's solve this **mathematical modeling problem step by step**, following the structure and requirements you provided.\n\n---\n\n### ✅ Step 1: Problem Understanding\n\nWe are optimizing the **inventory levels and procurement** for **two drugs (Drug 1 and Drug 2)** over **two periods (Period 0 and Period "
+        }
+      ]
+    }
+  },
+  {
+    "step": "9",
+    "prompt_index": 12,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 1,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "9",
+      "prompt_index": 12,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 354,
+          "has_python_tag": false,
+          "has_python_fence": false,
+          "output_preview": "<html>\n  <head>\n    <title>Insurance Sales Channel Optimization</title>\n  </head>\n  <body>\n    <h1>Insurance Sales Channel Optimization</h1>\n    <p>Step-by-step solution to the mathematical modeling problem.</p>\n    <h2>Step 1: Problem Analysis</h2>\n    <p>The insurance company has two sales channel"
+        }
+      ]
+    }
+  },
+  {
+    "step": "9",
+    "prompt_index": 22,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "bucket_changed|semantic_code_mismatch_rows_1|semantic_obj_mismatch_rows_1",
+    "logged_bucket": "minor",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 3,
+    "semantic_code_mismatch_rows": 1,
+    "semantic_obj_mismatch_rows": 1,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "review_needed",
+    "normalized_reasons": "bucket_changed|semantic_code_mismatch_rows|semantic_obj_mismatch_rows",
+    "detail": {
+      "step": "9",
+      "prompt_index": 22,
+      "type": "review_group",
+      "mismatches": [
+        {
+          "row_index": 690,
+          "code_mismatch": true,
+          "objective_mismatch": true,
+          "logged_code_exec_res": "ModuleNotFoundError: No module named 'gekko'",
+          "local_exec_report": "Done",
+          "logged_exec_kind": "dError",
+          "local_exec_kind": "Done",
+          "logged_solved_objective": null,
+          "local_obj_result": 48550.0,
+          "output_preview": "<modelo>\nWe are tasked with formulating a **minimum-cost flow problem** to determine the optimal shipping plan for ForestFlow Logistics. This is a classic **transportation problem with intermediate transshipment nodes (logistics hubs)**, where we minimize total transportation cost while satisfying s"
+        }
+      ]
+    }
+  },
+  {
+    "step": "12",
+    "prompt_index": 22,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "12",
+      "prompt_index": 22,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 182,
+          "has_python_tag": false,
+          "has_python_fence": false,
+          "output_preview": "<model>\nWe are to formulate and solve a **production scheduling optimization problem** over 5 discrete time periods with 2 products and 2 machines, aiming to minimize a combined objective function that balances **production cost** and **product completion times**.\n\n---\n\n### **Sets**\n- $ I = \\{0, 1\\}"
+        }
+      ]
+    }
+  },
+  {
+    "step": "13",
+    "prompt_index": 24,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "missing_code_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "missing_code_rows",
+    "detail": {
+      "step": "13",
+      "prompt_index": 24,
+      "type": "missing_code_group",
+      "missing_code_rows": [
+        {
+          "row_index": 200,
+          "has_python_tag": false,
+          "has_python_fence": false,
+          "output_preview": "<model>\nWe are given a **multimodal transportation network** with five nodes and two types of transport modes (trucks and barges), each with associated costs and capacities. The goal is to **minimize total transportation cost** while satisfying the given demands.\n\n---\n\n### **Step 1: Define the Sets*"
+        }
+      ]
+    }
+  },
+  {
+    "step": "13",
+    "prompt_index": 29,
+    "group_size": 64,
+    "abnormal": true,
+    "reasons": "group_size_64",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "data_integrity",
+    "normalized_reasons": "group_size_anomaly",
+    "detail": {
+      "step": "13",
+      "prompt_index": 29,
+      "type": "basic_group",
+      "note": "No deeper inspection required for this category."
+    }
+  },
+  {
+    "step": "13",
+    "prompt_index": 15,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "semantic_code_mismatch_rows_1|semantic_obj_mismatch_rows_1",
+    "logged_bucket": "minor",
+    "local_bucket": "minor",
+    "strict_code_mismatch_rows": 2,
+    "semantic_code_mismatch_rows": 1,
+    "semantic_obj_mismatch_rows": 1,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "review_needed",
+    "normalized_reasons": "semantic_code_mismatch_rows|semantic_obj_mismatch_rows",
+    "detail": {
+      "step": "13",
+      "prompt_index": 15,
+      "type": "review_group",
+      "mismatches": [
+        {
+          "row_index": 646,
+          "code_mismatch": true,
+          "objective_mismatch": true,
+          "logged_code_exec_res": "Done",
+          "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+          "logged_exec_kind": "Done",
+          "local_exec_kind": "iError",
+          "logged_solved_objective": 25.0,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are given a problem of selecting **three locations** among 10 potential ones (L1 to L10) such that the **minimum distance between any two of the selected locations is maximized**.\n\nThis is a classic **max-min optimization problem** — also known as the **max-min distance selection problem*"
+        }
+      ]
+    }
+  },
+  {
+    "step": "6",
+    "prompt_index": 22,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "semantic_code_mismatch_rows_5|semantic_obj_mismatch_rows_1",
+    "logged_bucket": "others",
+    "local_bucket": "others",
+    "strict_code_mismatch_rows": 5,
+    "semantic_code_mismatch_rows": 5,
+    "semantic_obj_mismatch_rows": 1,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "review_needed",
+    "normalized_reasons": "semantic_code_mismatch_rows|semantic_obj_mismatch_rows",
+    "detail": {
+      "step": "6",
+      "prompt_index": 22,
+      "type": "review_group",
+      "mismatches": [
+        {
+          "row_index": 178,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "AttributeError: module 'numpy' has no attribute 'math'",
+          "local_exec_report": "Done",
+          "logged_exec_kind": "eError",
+          "local_exec_kind": "Done",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are given a waiting line (queueing) problem that can be modeled as an **M/M/c queue**, where:\n\n- **M** = Poisson arrivals, exponential service times\n- **c** = number of servers (cashiers)\n- We are to **minimize the total expected hourly cost**, which includes:\n  - **Customer waiting cost*"
+        },
+        {
+          "row_index": 439,
+          "code_mismatch": true,
+          "objective_mismatch": true,
+          "logged_code_exec_res": "AttributeError: module 'numpy' has no attribute 'math'",
+          "local_exec_report": "Done",
+          "logged_exec_kind": "eError",
+          "local_exec_kind": "Done",
+          "logged_solved_objective": null,
+          "local_obj_result": 78.555555556,
+          "output_preview": "<model>\nWe are given a **single-server queueing system** (originally modeled as a **M/M/s queue**), where:\n\n---\n\n### **1. Sets**\n- $ s \\in \\{0, 1, 2, 3, 4, 5\\} $: number of cashiers to staff (up to 5)\n- We consider $ s = 0 $ to $ s = 5 $, as the store can staff up to 5 cashiers.\n\n---\n\n### **2. Param"
+        },
+        {
+          "row_index": 695,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "AttributeError: module 'numpy' has no attribute 'math'",
+          "local_exec_report": "Done",
+          "logged_exec_kind": "eError",
+          "local_exec_kind": "Done",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are tasked with determining the **optimal number of cashiers** to staff during peak hours at Chic Couture to **minimize total expected hourly cost**, which includes:\n\n- **Customer waiting cost** (per customer-hour of waiting)\n- **Cashier labor cost** (per cashier per hour)\n\n---\n\n### Step "
+        },
+        {
+          "row_index": 696,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "AttributeError: module 'numpy' has no attribute 'math'",
+          "local_exec_report": "Done",
+          "logged_exec_kind": "eError",
+          "local_exec_kind": "Done",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are tasked with determining the optimal number of cashiers to staff at Chic Couture during peak hours to **minimize the total expected hourly cost**, which consists of:\n\n1. **Customer waiting cost**: $20 per customer-hour of waiting  \n2. **Cashier wage cost**: $25 per cashier per hour\n\n--"
+        },
+        {
+          "row_index": 951,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "AttributeError: module 'numpy' has no attribute 'math'",
+          "local_exec_report": "Done",
+          "logged_exec_kind": "eError",
+          "local_exec_kind": "Done",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are tasked with determining the **optimal number of cashiers** to staff during peak shopping hours to **minimize the total expected hourly cost**, which includes:\n\n1. **Customer waiting cost**: $20 per customer-hour of waiting  \n2. **Cashier labor cost**: $25 per cashier per hour\n\n---\n\n##"
+        }
+      ]
+    }
+  },
+  {
+    "step": "10",
+    "prompt_index": 13,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "semantic_code_mismatch_rows_1",
+    "logged_bucket": "minor",
+    "local_bucket": "minor",
+    "strict_code_mismatch_rows": 7,
+    "semantic_code_mismatch_rows": 1,
+    "semantic_obj_mismatch_rows": 0,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "review_needed",
+    "normalized_reasons": "semantic_code_mismatch_rows",
+    "detail": {
+      "step": "10",
+      "prompt_index": 13,
+      "type": "review_group",
+      "mismatches": [
+        {
+          "row_index": 366,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "ModuleNotFoundError: No module named 'matplotlib'",
+          "local_exec_report": "AttributeError: Unable to retrieve attribute 'x'",
+          "logged_exec_kind": "dError",
+          "local_exec_kind": "eError",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are solving a **network design and flow optimization problem** involving the selection of regional data hubs, routing of data from primary data centers to client zones, and minimizing total cost (setup + transfer). This is a **mix of facility location and flow network optimization**, spec"
+        }
+      ]
+    }
+  },
+  {
+    "step": "10",
+    "prompt_index": 15,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "semantic_code_mismatch_rows_1|semantic_obj_mismatch_rows_1",
+    "logged_bucket": "maj",
+    "local_bucket": "maj",
+    "strict_code_mismatch_rows": 1,
+    "semantic_code_mismatch_rows": 1,
+    "semantic_obj_mismatch_rows": 1,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "review_needed",
+    "normalized_reasons": "semantic_code_mismatch_rows|semantic_obj_mismatch_rows",
+    "detail": {
+      "step": "10",
+      "prompt_index": 15,
+      "type": "review_group",
+      "mismatches": [
+        {
+          "row_index": 383,
+          "code_mismatch": true,
+          "objective_mismatch": true,
+          "logged_code_exec_res": "ModuleNotFoundError: No module named 'pyomo'",
+          "local_exec_report": "Done",
+          "logged_exec_kind": "dError",
+          "local_exec_kind": "Done",
+          "logged_solved_objective": null,
+          "local_obj_result": 477.0,
+          "output_preview": "<model>\nWe are tasked with creating a mathematical model to minimize StreamFlix’s total daily energy cost by optimally distributing the processing load between two data centers (DCE and DCW) across three time periods.\n\n---\n\n### **Step 1: Define the Decision Variables**\n\nLet the decision variables be"
+        }
+      ]
+    }
+  },
+  {
+    "step": "11",
+    "prompt_index": 21,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "semantic_obj_mismatch_rows_1",
+    "logged_bucket": "minor",
+    "local_bucket": "minor",
+    "strict_code_mismatch_rows": 0,
+    "semantic_code_mismatch_rows": 0,
+    "semantic_obj_mismatch_rows": 1,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "review_needed",
+    "normalized_reasons": "semantic_obj_mismatch_rows",
+    "detail": {
+      "step": "11",
+      "prompt_index": 21,
+      "type": "review_group",
+      "mismatches": [
+        {
+          "row_index": 935,
+          "code_mismatch": false,
+          "objective_mismatch": true,
+          "logged_code_exec_res": "Done",
+          "local_exec_report": "Done",
+          "logged_exec_kind": "Done",
+          "local_exec_kind": "Done",
+          "logged_solved_objective": 4.547473508864641,
+          "local_obj_result": 0.0,
+          "output_preview": "<model>\nWe are given a cooperative game among three companies—BioGenius (B), ClinPro (C), and PharmSynth (P)—with known profit values for different coalition structures. The goal is to:\n\n1. **Identify the optimal coalition** (i.e., subset of companies joining together) that maximizes total profit.\n2"
+        }
+      ]
+    }
+  },
+  {
+    "step": "15",
+    "prompt_index": 10,
+    "group_size": 32,
+    "abnormal": true,
+    "reasons": "semantic_code_mismatch_rows_2|semantic_obj_mismatch_rows_1",
+    "logged_bucket": "minor",
+    "local_bucket": "minor",
+    "strict_code_mismatch_rows": 2,
+    "semantic_code_mismatch_rows": 2,
+    "semantic_obj_mismatch_rows": 1,
+    "prompt_preview": "system You are a helpful Assistant with expertise in mathmetical modeling and the Gurobi solver. When the User provides an OR question, you will analyze it, build a detailed mathem",
+    "category": "review_needed",
+    "normalized_reasons": "semantic_code_mismatch_rows|semantic_obj_mismatch_rows",
+    "detail": {
+      "step": "15",
+      "prompt_index": 10,
+      "type": "review_group",
+      "mismatches": [
+        {
+          "row_index": 332,
+          "code_mismatch": true,
+          "objective_mismatch": true,
+          "logged_code_exec_res": "Done",
+          "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+          "logged_exec_kind": "Done",
+          "local_exec_kind": "iError",
+          "logged_solved_objective": 100.0,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are tasked with selecting **exactly three** sites out of 10 (labeled S1 to S10) for the new Virtual Reality Adventure Zones (VRAZs), such that the **minimum distance between any pair of selected sites is maximized**.\n\n---\n\n### Step 1: Problem Understanding\n\n- **Goal**: Maximize the *minim"
+        },
+        {
+          "row_index": 336,
+          "code_mismatch": true,
+          "objective_mismatch": false,
+          "logged_code_exec_res": "AttributeError: Unable to retrieve attribute 'X'",
+          "local_exec_report": "gurobipy._exception.GurobiError: Constraint has no bool value (are you trying \"lb <= expr <= ub\"?)",
+          "logged_exec_kind": "eError",
+          "local_exec_kind": "iError",
+          "logged_solved_objective": null,
+          "local_obj_result": null,
+          "output_preview": "<model>\nWe are tasked with selecting **three sites** out of **10 potential sites (S1 to S10)** such that the **minimum distance between any pair of selected sites is maximized**.\n\nThis is a classic **max-min distance optimization problem**, also known as the **\"Maximize the Minimum Distance\"** or **"
+        }
+      ]
+    }
+  }
+]
